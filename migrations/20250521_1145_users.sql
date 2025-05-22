@@ -12,8 +12,8 @@ CREATE TABLE users (
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     deleted_at TIMESTAMPTZ,
-    created_by UUID,
-    updated_by UUID
+    created_by BIGINT,
+    updated_by BIGINT
 );
 
 
