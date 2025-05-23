@@ -1,10 +1,13 @@
 const express = require('express')
 const authRoutes = require('./routes/auth.routes')
+const rentalRoutes = require('./routes/rental.routes')
 
 const app = express()
 app.use(express.json())
 
 app.use('/api/auth', authRoutes)
+
+app.use('/api/rentals', rentalRoutes)
 
 app.get('/', async (_, res) => {
   res.send(`Server is now running`)
