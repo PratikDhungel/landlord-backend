@@ -18,4 +18,19 @@ const login = async (req, res) => {
   }
 }
 
-module.exports = { register, login }
+const refresh = async (req, res) => {
+  try {
+    const { refreshToken } = req.body
+
+    if (!refreshToken) {
+      return res.status(400).json({ message: 'Missing refresh token' })
+    }
+
+    const response = await authService.refresh({ user: req.user, refreshToken })
+    res.status(200).json(response)
+  } catch (err) {
+    res.status(401).json({ error: err.message })
+  }
+}
+
+module.exports = { register, login, refresh }

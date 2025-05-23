@@ -14,6 +14,15 @@ const updateUserTokens = async ({ userId, refreshToken, expiresAt }) => {
   ])
 }
 
+const findTokenByHash = async ({ refreshToken }) => {
+  const dbRes = await db.query(`SELECT * FROM user_tokens WHERE refresh_token = $1 AND revoked_at IS NULL`, [
+    refreshToken,
+  ])
+
+  return dbRes.rows[0]
+}
+
 module.exports = {
   updateUserTokens,
+  findTokenByHash,
 }

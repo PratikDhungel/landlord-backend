@@ -1,7 +1,7 @@
 const { generateUserToken, generateRefreshToken } = require('../utils/jwt')
 const { hashPassword, comparePassword } = require('../utils/hash')
 const { findUserByEmail, createUser, updateLastLoggedIn } = require('../models/user.models')
-const { updateUserTokens } = require('../models/userToken.models')
+const { updateUserTokens, findTokenByHash } = require('../models/userToken.models')
 
 require('dotenv').config()
 
@@ -37,4 +37,33 @@ const login = async ({ email, password }) => {
   return { ...user, token, refreshToken }
 }
 
-module.exports = { register, login }
+const refresh = async ({ refreshToken, user }) => {
+  // Check token in DB
+  const tokenRow = await findTokenByHash({ refreshToken })
+
+  if (!tokenRow) {
+    throw new Error('Invalid or revoked refresh token')
+  }
+
+  // Check expiration
+  const now = new Date()
+  if (new Date(tokenRow.expires_at) < now) {
+    throw new Error('Refresh token expired')
+  }
+
+  const userId = tokenRow.user_id
+
+  const newAccessToken = generateUserToken(user)
+  const newRefreshToken = generateRefreshToken(user)
+  const newExpiresAt = new Date(Date.now() + Number(refreshTokenExpiry)).toISOString()
+
+  // Revoke old and insert new
+  updateUserTokens({ userId, refreshToken: newRefreshToken, expiresAt: newExpiresAt })
+
+  return {
+    token: newAccessToken,
+    refreshToken: newRefreshToken,
+  }
+}
+
+module.exports = { register, login, refresh }
