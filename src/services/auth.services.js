@@ -2,6 +2,7 @@ const { generateUserToken, generateRefreshToken } = require('../utils/jwt')
 const { hashPassword, comparePassword } = require('../utils/hash')
 const { findUserByEmail, createUser, updateLastLoggedIn } = require('../models/user.models')
 const { updateUserTokens, findTokenByHash } = require('../models/userToken.models')
+const { BadRequestError } = require('../utils/errors')
 
 require('dotenv').config()
 
@@ -10,7 +11,7 @@ const refreshTokenExpiry = process.env.REFRESH_TOKEN_EXPIRY
 const register = async ({ email, firstName, lastName, password }) => {
   const existing = await findUserByEmail(email)
 
-  if (existing) throw new Error('Email already exists')
+  if (existing) throw new BadRequestError('Email already exists')
 
   const passwordHash = await hashPassword(password)
   const user = await createUser({ email, firstName, lastName, passwordHash })
@@ -21,10 +22,10 @@ const register = async ({ email, firstName, lastName, password }) => {
 
 const login = async ({ email, password }) => {
   const user = await findUserByEmail(email)
-  if (!user) throw new Error('User with email does not exist')
+  if (!user) throw new BadRequestError('User with email does not exist')
 
   const valid = await comparePassword(password, user.password_hash)
-  if (!valid) throw new Error('Invalid password')
+  if (!valid) throw new BadRequestError('Invalid password')
 
   await updateLastLoggedIn(user.id)
 
@@ -42,13 +43,13 @@ const refresh = async ({ refreshToken, user }) => {
   const tokenRow = await findTokenByHash({ refreshToken })
 
   if (!tokenRow) {
-    throw new Error('Invalid or revoked refresh token')
+    throw new BadRequestError('Invalid or revoked refresh token')
   }
 
   // Check expiration
   const now = new Date()
   if (new Date(tokenRow.expires_at) < now) {
-    throw new Error('Refresh token expired')
+    throw new BadRequestError('Refresh token expired')
   }
 
   const userId = tokenRow.user_id

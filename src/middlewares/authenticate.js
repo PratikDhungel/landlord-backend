@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const { UnauthorizedError } = require('../utils/errors')
 require('dotenv').config()
 
 const JWT_SECRET = process.env.JWT_SECRET
@@ -7,7 +8,7 @@ function authenticateJWT(req, res, next) {
   const authHeader = req.headers.authorization
 
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return res.status(401).json({ message: 'No token provided' })
+    return next(new UnauthorizedError('Auth token not provided'))
   }
 
   const token = authHeader.split(' ')[1]
