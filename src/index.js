@@ -1,6 +1,6 @@
 const express = require('express')
 const authRoutes = require('./routes/auth.routes')
-const rentalRoutes = require('./routes/rental.routes')
+const rentalRoutes = require('./routes/rentals.routes')
 const { errorHandler } = require('./middlewares/errorHandler')
 
 const app = express()
