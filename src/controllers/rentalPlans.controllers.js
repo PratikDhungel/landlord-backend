@@ -1,7 +1,7 @@
 const rentalPlansServices = require('../services/rentalPlans.services')
 const { BadRequestError } = require('../utils/errors')
 
-const createRentalPlan = async (req, res, next) => {
+async function createRentalPlan(req, res, next) {
   try {
     const { name, rate, ratePeriod } = req.body
 
@@ -24,8 +24,6 @@ const createRentalPlan = async (req, res, next) => {
       ...req.body,
     }
 
-    console.log('rentalPlanPayload', rentalPlanPayload)
-
     const rentalPlan = await rentalPlansServices.createRentalPlan(rentalPlanPayload)
 
     res.status(201).json(rentalPlan)
@@ -34,4 +32,16 @@ const createRentalPlan = async (req, res, next) => {
   }
 }
 
-module.exports = { createRentalPlan }
+async function getRentalPlansForUser(req, res, next) {
+  try {
+    const user = req.user
+
+    const rentalPlans = await rentalPlansServices.getRentalPlans({ ownerId: user.id })
+
+    res.status(201).json(rentalPlans)
+  } catch (err) {
+    next(err)
+  }
+}
+
+module.exports = { createRentalPlan, getRentalPlansForUser }
