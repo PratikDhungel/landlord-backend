@@ -15,6 +15,10 @@ async function recordPaymentForRental(req, res, next) {
       return next(new BadRequestError('Payment amount is required'))
     }
 
+    if (!payment_date) {
+      return next(new BadRequestError('Payment date is required'))
+    }
+
     if (!isValidDate(payment_date)) {
       return next(new BadRequestError('Invalid payment date'))
     }
