@@ -3,7 +3,7 @@ const { BadRequestError } = require('../utils/errors')
 
 async function createRentalPlan(req, res, next) {
   try {
-    const { name, rate, ratePeriod } = req.body
+    const { name, rate, rate_period } = req.body
 
     if (!name) {
       return next(new BadRequestError('Name is required'))
@@ -13,7 +13,7 @@ async function createRentalPlan(req, res, next) {
       return next(new BadRequestError('Rate is required'))
     }
 
-    if (!ratePeriod) {
+    if (!rate_period) {
       return next(new BadRequestError('Rate Period is required'))
     }
 
@@ -21,7 +21,9 @@ async function createRentalPlan(req, res, next) {
 
     const rentalPlanPayload = {
       ownerId: user.id,
-      ...req.body,
+      name,
+      rate,
+      ratePeriod: rate_period,
     }
 
     const rentalPlan = await rentalPlansServices.createRentalPlan(rentalPlanPayload)

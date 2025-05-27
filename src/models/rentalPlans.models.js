@@ -11,7 +11,9 @@ async function createRentalPlan({ ownerId, name, rate, ratePeriod }) {
 }
 
 async function findRentalPlansByUser({ ownerId }) {
-  const res = await db.query('SELECT * FROM rental_plans WHERE owner_id = $1', [ownerId])
+  const res = await db.query('SELECT * FROM rental_plans WHERE owner_id = $1 AND deleted_at is null', [
+    ownerId,
+  ])
 
   return res.rows
 }

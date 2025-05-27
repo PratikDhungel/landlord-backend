@@ -22,7 +22,7 @@ CREATE TABLE rentals (
     id SERIAL PRIMARY KEY,
     plan_id INTEGER REFERENCES rental_plans(id),
     owner_id INTEGER REFERENCES users(id),
-    renter_id INTEGER REFERENCES users(id),
+    tenant_id INTEGER REFERENCES users(id),
     start_date TIMESTAMPTZ NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
