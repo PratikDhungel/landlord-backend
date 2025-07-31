@@ -1,0 +1,1 @@
+2025-07-31T17:40:02.502Z [ERROR]: Login user error: Invalid password {"stack":"Error: Invalid password\n    at Object.login (/app/src/services/auth.services.js:28:21)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
