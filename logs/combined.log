@@ -1,3 +1,17 @@
 2025-07-31T17:39:44.795Z [INFO]: Login user with email admin 
 2025-07-31T17:40:02.428Z [INFO]: Login user with email admin 
 2025-07-31T17:40:02.502Z [ERROR]: Login user error: Invalid password {"stack":"Error: Invalid password\n    at Object.login (/app/src/services/auth.services.js:28:21)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
+2025-08-01T03:10:50.085Z [INFO]: Login user with email admin 
+2025-08-01T03:17:10.836Z [INFO]: Login user with email admin 
+2025-08-01T12:01:30.508Z [INFO]: Login user with email admin 
+2025-08-01T14:41:15.560Z [ERROR]: getUsersList for query: undefined 
+2025-08-01T14:41:15.564Z [ERROR]: getUsersList user error: logger is not defined {"stack":"ReferenceError: logger is not defined\n    at Object.getUsersListByQuery (/app/src/services/users.services.js:4:3)\n    at getUsersList (/app/src/controllers/users.controllers.js:10:43)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:149:13)\n    at authenticateJWT (/app/src/middlewares/authenticate.js:19:5)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at /app/node_modules/express/lib/router/index.js:284:15"}
+2025-08-01T14:41:34.353Z [ERROR]: getUsersList for query: undefined 
+2025-08-01T14:41:34.354Z [ERROR]: get users list by name service: undefined 
+2025-08-01T14:41:34.355Z [ERROR]: query users by first name and last name for: undefined 
+2025-08-01T14:43:08.154Z [ERROR]: getUsersList for query:  
+2025-08-01T14:43:08.156Z [ERROR]: get users list by name service:  
+2025-08-01T14:43:08.157Z [ERROR]: query users by first name and last name for:  
+2025-08-01T14:43:14.444Z [ERROR]: getUsersList for query:  
+2025-08-01T14:43:14.445Z [ERROR]: get users list by name service:  
+2025-08-01T14:43:14.445Z [ERROR]: query users by first name and last name for:  

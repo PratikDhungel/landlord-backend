@@ -1,4 +1,5 @@
 const db = require('../db/db')
+const logger = require('../utils/logger')
 
 const findUserByEmail = async (email) => {
   const res = await db.query('SELECT * FROM users WHERE email = $1', [email])
@@ -19,8 +20,23 @@ const updateLastLoggedIn = async (userId) => {
   await db.query(`UPDATE users SET last_login_at = NOW(), updated_at = NOW() WHERE id = $1`, [userId])
 }
 
+async function findUsersByName(name) {
+  logger.error(`query users by first name and last name for: ${name}`)
+
+  const query = `
+  SELECT * FROM users
+  WHERE first_name ILIKE '%' || $1 || '%'
+  OR last_name ILIKE '%' || $1 || '%'
+  `
+
+  const res = await db.query(query, [name])
+
+  return res.rows
+}
+
 module.exports = {
   findUserByEmail,
   createUser,
   updateLastLoggedIn,
+  findUsersByName,
 }
