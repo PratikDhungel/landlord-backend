@@ -21,10 +21,10 @@ const updateLastLoggedIn = async (userId) => {
 }
 
 async function findUsersByName(name) {
-  logger.error(`query users by first name and last name for: ${name}`)
+  logger.info(`query users by first name and last name for: ${name}`)
 
   const query = `
-  SELECT * FROM users
+  SELECT id, email, first_name, last_name, role, is_active, created_at, updated_at FROM users
   WHERE first_name ILIKE '%' || $1 || '%'
   OR last_name ILIKE '%' || $1 || '%'
   `

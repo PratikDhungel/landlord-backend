@@ -4,10 +4,11 @@ const usersServices = require('../services/users.services')
 async function getUsersList(req, res, next) {
   try {
     const { name = '' } = req.query
+    const currentUser = req.user
 
-    logger.error(`getUsersList for query: ${name}`)
+    logger.info(`getUsersList for query: ${name}`)
 
-    const usersList = await usersServices.getUsersListByQuery({ name })
+    const usersList = await usersServices.getUsersListByQuery({ name, currentUser })
 
     res.status(201).json(usersList)
   } catch (err) {
