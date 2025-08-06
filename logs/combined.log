@@ -98,3 +98,30 @@
 2025-08-06T11:23:21.218Z [INFO]: getUsersList for query: adm 
 2025-08-06T11:23:21.218Z [INFO]: get users financial summary service: undefined 
 2025-08-06T11:23:21.218Z [INFO]: query user's financial summary for user: undefined 
+2025-08-06T11:25:53.658Z [INFO]: getUsersFinancialSummary for user: 3 
+2025-08-06T11:25:53.660Z [INFO]: get users financial summary service: 3 
+2025-08-06T11:25:53.661Z [INFO]: query user's financial summary for user: 3 
+2025-08-06T11:26:01.508Z [INFO]: getUsersList for query: adm 
+2025-08-06T11:26:01.509Z [INFO]: get users list by name service: adm 
+2025-08-06T11:26:01.510Z [INFO]: query users by first name and last name for: adm 
+2025-08-06T11:26:01.515Z [INFO]: filter users list except current user: 3 
+2025-08-06T11:26:03.010Z [INFO]: getUsersList for query: admi 
+2025-08-06T11:26:03.011Z [INFO]: get users list by name service: admi 
+2025-08-06T11:26:03.012Z [INFO]: query users by first name and last name for: admi 
+2025-08-06T11:26:03.014Z [INFO]: filter users list except current user: 3 
+2025-08-06T11:26:03.222Z [INFO]: getUsersList for query: admin 
+2025-08-06T11:26:03.222Z [INFO]: get users list by name service: admin 
+2025-08-06T11:26:03.223Z [INFO]: query users by first name and last name for: admin 
+2025-08-06T11:26:03.226Z [INFO]: filter users list except current user: 3 
+2025-08-06T11:26:06.800Z [INFO]: getUsersList for query: pra 
+2025-08-06T11:26:06.800Z [INFO]: get users list by name service: pra 
+2025-08-06T11:26:06.801Z [INFO]: query users by first name and last name for: pra 
+2025-08-06T11:26:06.804Z [INFO]: filter users list except current user: 3 
+2025-08-06T11:26:07.217Z [INFO]: getUsersList for query: prat 
+2025-08-06T11:26:07.217Z [INFO]: get users list by name service: prat 
+2025-08-06T11:26:07.217Z [INFO]: query users by first name and last name for: prat 
+2025-08-06T11:26:07.220Z [INFO]: filter users list except current user: 3 
+2025-08-06T11:26:33.093Z [INFO]: Login user with email admin 
+2025-08-06T11:26:33.220Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-06T11:26:33.220Z [INFO]: get users financial summary service: 1 
+2025-08-06T11:26:33.221Z [INFO]: query user's financial summary for user: 1 
