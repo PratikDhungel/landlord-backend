@@ -13,4 +13,12 @@ async function getUsersListByQuery({ name, currentUser }) {
   return filteredUsers
 }
 
+async function getUsersListByQuery({ userId }) {
+  logger.info(`get users financial summary service: ${userId}`)
+
+  const financialSummary = await usersModels.calculateUserFinancialSummary(userId)
+
+  return financialSummary
+}
+
 module.exports = { getUsersListByQuery }

@@ -39,9 +39,25 @@ async function findUsersByName(name) {
   return res.rows
 }
 
+async function calculateUserFinancialSummary(userId) {
+  logger.info(`query user's financial summary for user: ${userId}`)
+
+  const query = `
+  SELECT 
+    COUNT(CASE WHEN owner_id = $1 THEN id END)::INTEGER AS owned_rental_count,
+    COUNT(CASE WHEN tenant_id = $1 THEN id END)::INTEGER AS liable_rental_count
+  FROM rentals
+  `
+
+  const res = await db.query(query, [userId])
+
+  return res.rows[0]
+}
+
 module.exports = {
   findUserByEmail,
   createUser,
   updateLastLoggedIn,
   findUsersByName,
+  calculateUserFinancialSummary,
 }
