@@ -25,3 +25,4 @@
 2025-08-01T15:22:50.244Z [ERROR]: getUsersList for query: prat 
 2025-08-01T15:22:50.244Z [ERROR]: get users list by name service: prat 
 2025-08-01T15:22:50.244Z [ERROR]: query users by first name and last name for: prat 
+2025-08-06T11:17:51.476Z [ERROR]: Login user error: User with email does not exist {"stack":"Error: User with email does not exist\n    at Object.login (/app/src/services/auth.services.js:25:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}

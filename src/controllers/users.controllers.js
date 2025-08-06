@@ -24,7 +24,7 @@ async function getUsersFinancialSummary(req, res, next) {
 
     logger.info(`getUsersFinancialSummary for user: ${currentUser.id}`)
 
-    const usersList = await usersServices.getUsersListByQuery({ userId: currentUser.id })
+    const usersList = await usersServices.getFinancialSummaryByUserId({ userId: currentUser.id })
 
     res.status(201).json(usersList)
   } catch (err) {
