@@ -35,7 +35,9 @@ const login = async ({ email, password }) => {
 
   await updateUserTokens({ userId: user.id, refreshToken, expiresAt })
 
-  return { ...user, token, refreshToken }
+  const { password_hash, ...userInfo } = user
+
+  return { ...userInfo, token, refreshToken }
 }
 
 const refresh = async ({ refreshToken, user }) => {

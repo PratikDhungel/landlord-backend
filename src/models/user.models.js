@@ -2,7 +2,12 @@ const db = require('../db/db')
 const logger = require('../utils/logger')
 
 const findUserByEmail = async (email) => {
-  const res = await db.query('SELECT * FROM users WHERE email = $1', [email])
+  const query = `
+  SELECT id, email, password_hash, first_name, last_name, role, is_active, created_at, updated_at FROM users
+  WHERE email = $1
+  `
+
+  const res = await db.query(query, [email])
   return res.rows[0]
 }
 
@@ -10,7 +15,7 @@ const createUser = async ({ email, firstName, lastName, passwordHash }) => {
   const res = await db.query(
     `INSERT INTO users (email, first_name, last_name, password_hash)
      VALUES ($1, $2, $3, $4)
-     RETURNING *`,
+     RETURNING id, email, first_name, last_name, role, is_active, created_at, updated_at`,
     [email, firstName, lastName, passwordHash],
   )
   return res.rows[0]
