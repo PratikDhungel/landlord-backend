@@ -125,3 +125,26 @@
 2025-08-06T11:26:33.220Z [INFO]: getUsersFinancialSummary for user: 1 
 2025-08-06T11:26:33.220Z [INFO]: get users financial summary service: 1 
 2025-08-06T11:26:33.221Z [INFO]: query user's financial summary for user: 1 
+2025-08-06T12:01:34.306Z [INFO]: getUsersFinancialSummary for user: 3 
+2025-08-06T12:01:34.307Z [INFO]: get users financial summary service: 3 
+2025-08-06T12:01:34.307Z [INFO]: query user's financial summary for user: 3 
+2025-08-06T12:20:38.018Z [INFO]: getUsersFinancialSummary for user: 3 
+2025-08-06T12:20:38.019Z [INFO]: get users financial summary service: 3 
+2025-08-06T12:20:38.019Z [INFO]: query user's financial summary for user: 3 
+2025-08-06T15:51:29.170Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-06T15:51:29.171Z [INFO]: get users financial summary service: 1 
+2025-08-06T15:51:29.171Z [INFO]: query user's financial summary for user: 1 
+2025-08-06T15:56:07.847Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-06T15:56:07.848Z [INFO]: get users financial summary service: 1 
+2025-08-06T15:56:07.848Z [INFO]: query user's financial summary for user: 1 
+2025-08-06T15:59:01.988Z [INFO]: getUsersFinancialSummary for user: 3 
+2025-08-06T15:59:01.990Z [INFO]: get users financial summary service: 3 
+2025-08-06T15:59:01.990Z [INFO]: query user's financial summary for user: 3 
+2025-08-06T16:04:02.548Z [INFO]: Login user with email admin 
+2025-08-06T16:04:02.898Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-06T16:04:02.899Z [INFO]: get users financial summary service: 1 
+2025-08-06T16:04:02.899Z [INFO]: query user's financial summary for user: 1 
+2025-08-06T16:04:44.189Z [INFO]: Login user with email admin 
+2025-08-06T16:04:44.323Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-06T16:04:44.323Z [INFO]: get users financial summary service: 1 
+2025-08-06T16:04:44.323Z [INFO]: query user's financial summary for user: 1 
