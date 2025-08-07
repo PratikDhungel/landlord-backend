@@ -1,3 +1,4 @@
+const logger = require('../utils/logger')
 const rentalsModels = require('../models/rentals.models')
 
 async function createRental(rentalPayload) {
@@ -13,9 +14,25 @@ async function getRentalsForOwner({ ownerId }) {
 }
 
 async function getRentalsForTenants({ tenantId }) {
-  const rentals = await rentalsModels.findRentalsByTenant({ tenantId })
+  const rentals = await rentalsModels.findRentalsDetailsByTenantId({ tenantId })
 
   return rentals
 }
 
-module.exports = { createRental, getRentalsForOwner, getRentalsForTenants }
+async function getLiableRentalDetailsWithPayment({ rentalId, tenantId }) {
+  logger.info(`checking if rental id ${rentalId} matches for tenantId ${tenantId}`)
+
+  const rentalForTenant = rentalsModels.checkRentalIdForTenant({ rentalId, tenantId })
+
+  if (!rentalForTenant) {
+    logger.error(`rental id ${rentalId} not available for ${tenantId}`)
+
+    throw new BadRequestError('Rental for tenant id does not exist')
+  }
+
+  const rentalDetail = await rentalsModels.findRentalDetailByRentalId({ rentalId })
+
+  return rentalDetail
+}
+
+module.exports = { createRental, getRentalsForOwner, getRentalsForTenants, getLiableRentalDetailsWithPayment }

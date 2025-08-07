@@ -1,3 +1,4 @@
+const logger = require('../utils/logger')
 const rentalsServices = require('../services/rentals.services')
 const { isValidDate } = require('../utils/dateUtils')
 const { BadRequestError } = require('../utils/errors')
@@ -65,4 +66,23 @@ async function getRentalsForTenants(req, res, next) {
   }
 }
 
-module.exports = { createRental, getRentalsForOwner, getRentalsForTenants }
+async function getLiableRentalDetailById(req, res, next) {
+  try {
+    const rentalId = req.params.id
+    const user = req.user
+    const userId = user.id
+
+    logger.info(`get liable rental details for user and rental id: ${userId}, ${rentalId}`)
+
+    const rentalDetailWithPayment = await rentalsServices.getLiableRentalDetailsWithPayment({
+      tenantId: userId,
+      rentalId,
+    })
+
+    res.status(201).json(rentalDetailWithPayment)
+  } catch (err) {
+    next(err)
+  }
+}
+
+module.exports = { createRental, getRentalsForOwner, getRentalsForTenants, getLiableRentalDetailById }
