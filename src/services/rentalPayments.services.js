@@ -12,7 +12,11 @@ async function getAllPaymentsForRentalId(rentalId) {
 
   const rentalPayments = await rentalPaymentsModels.findAllPaymentsByRentalId(rentalId)
 
-  return rentalPayments
+  logger.info(`calculating total payments for rental${rentalId}`)
+
+  const totalPaymentAmount = rentalPayments.map((eachPayment) => eachPayment.amount)[0]
+
+  return { payments: rentalPayments, total: totalPaymentAmount }
 }
 
 module.exports = { recordPaymentForRental, getAllPaymentsForRentalId }
