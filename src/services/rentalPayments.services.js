@@ -14,7 +14,7 @@ async function getAllRentalPaymentWithTotal(rentalId) {
 
   logger.info(`calculating total payments for rental${rentalId}`)
 
-  const totalPaymentAmount = rentalPayments.map((eachPayment) => eachPayment.amount)[0]
+  const totalPaymentAmount = rentalPayments.reduce((prev, eachPayment) => prev + eachPayment.amount, 0)
 
   return { payments: rentalPayments, total: totalPaymentAmount }
 }
