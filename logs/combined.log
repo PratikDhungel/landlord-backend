@@ -185,3 +185,14 @@
 2025-08-07T05:29:04.709Z [INFO]: getting all payments for 5 for rental details 
 2025-08-07T05:29:04.710Z [INFO]: get all payments service for rentalId 5 
 2025-08-07T05:29:04.710Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T05:40:37.961Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T05:40:37.963Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:40:37.967Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T05:40:37.968Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T05:40:37.968Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T05:41:28.171Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T05:41:28.173Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:41:28.176Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T05:41:28.176Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T05:41:28.177Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T05:41:28.187Z [INFO]: getting rental details service for 5 

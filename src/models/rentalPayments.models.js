@@ -15,7 +15,7 @@ async function findAllPaymentsByRentalId(rentalId) {
   logger.info(`query rental payments for rental id: ${rentalId}`)
 
   const query = `
-  SELECT * as total_payment from rental_payments
+  SELECT * from rental_payments
   WHERE rental_id = $1
   `
 
