@@ -15,13 +15,12 @@ async function recordPaymentForRental(req, res, next) {
       return next(new BadRequestError('Payment amount is required'))
     }
 
-    if (!payment_date) {
-      return next(new BadRequestError('Payment date is required'))
-    }
-
-    if (!isValidDate(payment_date)) {
+    if (payment_date && !isValidDate(payment_date)) {
       return next(new BadRequestError('Invalid payment date'))
     }
+
+    // If payment date not available, set current time as payment date
+    const paymentDate = payment_date || new Date()
 
     const user = req.user
 
@@ -29,7 +28,7 @@ async function recordPaymentForRental(req, res, next) {
       rentalId: rental_id,
       payerId: user.id,
       amount: amount,
-      paymentDate: payment_date,
+      paymentDate,
     }
 
     const rentals = await rentalPaymentsServices.recordPaymentForRental(rentalPaymentPayload)
