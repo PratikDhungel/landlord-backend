@@ -1,5 +1,6 @@
 const logger = require('../utils/logger')
 const rentalsModels = require('../models/rentals.models')
+const rentalPaymentsServices = require('./rentalPayments.services')
 
 async function createRental(rentalPayload) {
   const rental = await rentalsModels.createRental(rentalPayload)
@@ -30,9 +31,17 @@ async function getLiableRentalDetailsWithPayment({ rentalId, tenantId }) {
     throw new BadRequestError('Rental for tenant id does not exist')
   }
 
+  logger.info(`getting all payments for ${rentalId} for rental details`)
+
+  const rentalPayments = await rentalPaymentsServices.getAllPaymentsForRentalId(rentalId)
+
+  logger.info(`getting rental details service for ${rentalId}`)
+
   const rentalDetail = await rentalsModels.findRentalDetailByRentalId({ rentalId })
 
-  return rentalDetail
+  const rentalDetailWithPayments = { ...rentalDetail, payments: rentalPayments }
+
+  return rentalDetailWithPayments
 }
 
 module.exports = { createRental, getRentalsForOwner, getRentalsForTenants, getLiableRentalDetailsWithPayment }

@@ -162,3 +162,26 @@
 2025-08-07T03:02:16.686Z [INFO]: query user's financial summary for user: 1 
 2025-08-07T03:24:14.993Z [INFO]: get liable rental details for user and rental id: 1, 5 
 2025-08-07T03:24:14.994Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:22:10.460Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T05:22:10.462Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:22:10.465Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T05:22:10.465Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T05:22:10.465Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T05:22:10.466Z [INFO]: getting rental details service for 5 
+2025-08-07T05:23:27.018Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T05:23:27.019Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:23:27.025Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T05:23:27.025Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T05:23:27.025Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T05:23:27.026Z [INFO]: getting rental details service for 5 
+2025-08-07T05:23:38.982Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T05:23:38.984Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:23:38.989Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T05:23:38.989Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T05:23:38.989Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T05:23:39.002Z [INFO]: getting rental details service for 5 
+2025-08-07T05:29:04.706Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T05:29:04.706Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T05:29:04.709Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T05:29:04.710Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T05:29:04.710Z [INFO]: query rental payments for rental id: 5 
