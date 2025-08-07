@@ -33,13 +33,13 @@ async function getLiableRentalDetailsWithPayment({ rentalId, tenantId }) {
 
   logger.info(`getting all payments for ${rentalId} for rental details`)
 
-  const rentalPayments = await rentalPaymentsServices.getAllPaymentsForRentalId(rentalId)
+  const rentalPaymentsWithTotal = await rentalPaymentsServices.getAllRentalPaymentWithTotal(rentalId)
 
   logger.info(`getting rental details service for ${rentalId}`)
 
   const rentalDetail = await rentalsModels.findRentalDetailByRentalId({ rentalId })
 
-  const rentalDetailWithPayments = { ...rentalDetail, payments: rentalPayments }
+  const rentalDetailWithPayments = { ...rentalDetail, paymentDetails: rentalPaymentsWithTotal }
 
   return rentalDetailWithPayments
 }

@@ -7,7 +7,7 @@ async function recordPaymentForRental(rentalPaymentPayload) {
   return rentals
 }
 
-async function getAllPaymentsForRentalId(rentalId) {
+async function getAllRentalPaymentWithTotal(rentalId) {
   logger.info(`get all payments service for rentalId ${rentalId}`)
 
   const rentalPayments = await rentalPaymentsModels.findAllPaymentsByRentalId(rentalId)
@@ -19,4 +19,4 @@ async function getAllPaymentsForRentalId(rentalId) {
   return { payments: rentalPayments, total: totalPaymentAmount }
 }
 
-module.exports = { recordPaymentForRental, getAllPaymentsForRentalId }
+module.exports = { recordPaymentForRental, getAllRentalPaymentWithTotal }
