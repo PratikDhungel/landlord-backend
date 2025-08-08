@@ -420,3 +420,31 @@
 2025-08-07T14:54:28.879Z [INFO]: query rental payments for rental id: 5 
 2025-08-07T14:54:28.893Z [INFO]: calculating total payments for rental5 
 2025-08-07T14:54:28.893Z [INFO]: getting rental details service for 5 
+2025-08-07T14:55:11.279Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T14:55:11.279Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T14:55:11.281Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T14:55:11.282Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T14:55:11.282Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T14:55:11.294Z [INFO]: calculating total payments for rental5 
+2025-08-07T14:55:11.294Z [INFO]: getting rental details service for 5 
+2025-08-07T14:56:37.954Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-07T14:56:37.955Z [INFO]: get users financial summary service: 1 
+2025-08-07T14:56:37.956Z [INFO]: query user's financial summary for user: 1 
+2025-08-07T14:56:46.961Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-07T14:56:46.962Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-07T14:56:46.962Z [INFO]: getting all payments for 5 for rental details 
+2025-08-07T14:56:46.962Z [INFO]: get all payments service for rentalId 5 
+2025-08-07T14:56:46.962Z [INFO]: query rental payments for rental id: 5 
+2025-08-07T14:56:46.979Z [INFO]: calculating total payments for rental5 
+2025-08-07T14:56:46.979Z [INFO]: getting rental details service for 5 
+2025-08-08T01:56:55.307Z [INFO]: Login user with email admin 
+2025-08-08T01:56:55.418Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T01:56:55.418Z [INFO]: get users financial summary service: 1 
+2025-08-08T01:56:55.418Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T03:23:19.430Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T03:23:19.432Z [INFO]: get users financial summary service: 1 
+2025-08-08T03:23:19.432Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T03:23:19.438Z [ERROR]: getUsersFinancialSummary error: bind message supplies 1 parameters, but prepared statement "" requires 0 {"stack":"error: bind message supplies 1 parameters, but prepared statement \"\" requires 0\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.calculateUserFinancialSummary (/app/src/models/user.models.js:56:15)\n    at async Object.getFinancialSummaryByUserId (/app/src/services/users.services.js:19:28)\n    at async getUsersFinancialSummary (/app/src/controllers/users.controllers.js:27:23)"}
+2025-08-08T03:23:36.186Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T03:23:36.188Z [INFO]: get users financial summary service: 1 
+2025-08-08T03:23:36.189Z [INFO]: query user's financial summary for user: 1 

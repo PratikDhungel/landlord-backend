@@ -44,9 +44,13 @@ async function calculateUserFinancialSummary(userId) {
 
   const query = `
   SELECT 
-    COUNT(CASE WHEN owner_id = $1 THEN id END)::INTEGER AS owned_rental_count,
-    COUNT(CASE WHEN tenant_id = $1 THEN id END)::INTEGER AS liable_rental_count
-  FROM rentals
+    COUNT(DISTINCT CASE WHEN re.owner_id = $1 then re.id END)::INTEGER AS owned_rental_count,
+    COUNT(DISTINCT CASE WHEN re.tenant_id = $1 THEN re.id END)::INTEGER AS liable_rental_count,
+    COALESCE(SUM(CASE WHEN re.owner_id = $1 THEN rp.amount END), 0) AS total_earnings,
+    COALESCE(SUM(CASE WHEN re.tenant_id = $1 THEN rp.amount END), 0) AS total_expenditure
+  FROM rental_payments rp 
+  LEFT JOIN rentals re ON re.id= rp.rental_id
+  WHERE re.owner_id = $1 OR re.tenant_id  = $1;
   `
 
   const res = await db.query(query, [userId])
