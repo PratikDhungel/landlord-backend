@@ -514,3 +514,126 @@
 2025-08-08T06:45:12.511Z [INFO]: query rental payments for rental id: 3 
 2025-08-08T06:45:12.524Z [INFO]: calculating total payments for rental3 
 2025-08-08T06:45:12.524Z [INFO]: getting rental details service for 3 
+2025-08-08T06:47:58.068Z [INFO]: Login user with email admin 
+2025-08-08T06:47:58.318Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T06:47:58.319Z [INFO]: get users financial summary service: 1 
+2025-08-08T06:47:58.320Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T06:48:30.315Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T06:48:30.316Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T06:48:30.316Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T06:48:30.316Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T06:48:30.316Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T06:48:30.329Z [INFO]: calculating total payments for rental3 
+2025-08-08T06:48:30.330Z [INFO]: getting rental details service for 3 
+2025-08-08T06:49:20.266Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-08T06:49:20.267Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-08T06:49:20.270Z [INFO]: getting all payments for 5 for rental details 
+2025-08-08T06:49:20.270Z [INFO]: get all payments service for rentalId 5 
+2025-08-08T06:49:20.271Z [INFO]: query rental payments for rental id: 5 
+2025-08-08T06:49:20.287Z [INFO]: calculating total payments for rental5 
+2025-08-08T06:49:20.287Z [INFO]: getting rental details service for 5 
+2025-08-08T06:49:44.498Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-08T06:49:44.499Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-08T06:49:44.499Z [INFO]: getting all payments for 5 for rental details 
+2025-08-08T06:49:44.499Z [INFO]: get all payments service for rentalId 5 
+2025-08-08T06:49:44.499Z [INFO]: query rental payments for rental id: 5 
+2025-08-08T06:49:44.513Z [INFO]: calculating total payments for rental5 
+2025-08-08T06:49:44.513Z [INFO]: getting rental details service for 5 
+2025-08-08T11:05:06.581Z [INFO]: Login user with email johndoe1@exmaple.com 
+2025-08-08T11:05:06.599Z [ERROR]: Login user error: User with email does not exist {"stack":"Error: User with email does not exist\n    at Object.login (/app/src/services/auth.services.js:25:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
+2025-08-08T11:05:18.941Z [INFO]: Login user with email johndoe1@example.com 
+2025-08-08T11:05:19.074Z [INFO]: getUsersFinancialSummary for user: 2 
+2025-08-08T11:05:19.074Z [INFO]: get users financial summary service: 2 
+2025-08-08T11:05:19.074Z [INFO]: query user's financial summary for user: 2 
+2025-08-08T11:05:27.416Z [INFO]: get liable rental details for user and rental id: 2, 3 
+2025-08-08T11:05:27.416Z [INFO]: checking if rental id 3 matches for tenantId 2 
+2025-08-08T11:05:27.416Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T11:05:27.417Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T11:05:27.417Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T11:05:27.429Z [INFO]: calculating total payments for rental3 
+2025-08-08T11:05:27.430Z [INFO]: getting rental details service for 3 
+2025-08-08T11:07:02.655Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T11:07:02.657Z [INFO]: get users financial summary service: 1 
+2025-08-08T11:07:02.657Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T11:07:58.011Z [INFO]: Login user with email johndoe 
+2025-08-08T11:07:58.034Z [ERROR]: Login user error: User with email does not exist {"stack":"Error: User with email does not exist\n    at Object.login (/app/src/services/auth.services.js:25:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
+2025-08-08T11:08:10.619Z [INFO]: Login user with email johndoe 
+2025-08-08T11:08:10.631Z [ERROR]: Login user error: User with email does not exist {"stack":"Error: User with email does not exist\n    at Object.login (/app/src/services/auth.services.js:25:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
+2025-08-08T11:08:26.043Z [INFO]: Login user with email johndoe1 
+2025-08-08T11:08:34.667Z [INFO]: get liable rental details for user and rental id: 2, 4 
+2025-08-08T11:08:34.668Z [INFO]: checking if rental id 4 matches for tenantId 2 
+2025-08-08T11:08:34.668Z [INFO]: getting all payments for 4 for rental details 
+2025-08-08T11:08:34.668Z [INFO]: get all payments service for rentalId 4 
+2025-08-08T11:08:34.668Z [INFO]: query rental payments for rental id: 4 
+2025-08-08T11:08:34.681Z [INFO]: calculating total payments for rental4 
+2025-08-08T11:08:34.681Z [INFO]: getting rental details service for 4 
+2025-08-08T11:08:48.439Z [INFO]: get liable rental details for user and rental id: 2, 4 
+2025-08-08T11:08:48.440Z [INFO]: checking if rental id 4 matches for tenantId 2 
+2025-08-08T11:08:48.440Z [INFO]: getting all payments for 4 for rental details 
+2025-08-08T11:08:48.441Z [INFO]: get all payments service for rentalId 4 
+2025-08-08T11:08:48.441Z [INFO]: query rental payments for rental id: 4 
+2025-08-08T11:08:48.457Z [INFO]: calculating total payments for rental4 
+2025-08-08T11:08:48.457Z [INFO]: getting rental details service for 4 
+2025-08-08T11:09:36.730Z [INFO]: get liable rental details for user and rental id: 2, 4 
+2025-08-08T11:09:36.730Z [INFO]: checking if rental id 4 matches for tenantId 2 
+2025-08-08T11:09:36.730Z [INFO]: getting all payments for 4 for rental details 
+2025-08-08T11:09:36.730Z [INFO]: get all payments service for rentalId 4 
+2025-08-08T11:09:36.730Z [INFO]: query rental payments for rental id: 4 
+2025-08-08T11:09:36.739Z [INFO]: calculating total payments for rental4 
+2025-08-08T11:09:36.739Z [INFO]: getting rental details service for 4 
+2025-08-08T11:10:09.224Z [INFO]: get liable rental details for user and rental id: 2, 3 
+2025-08-08T11:10:09.224Z [INFO]: checking if rental id 3 matches for tenantId 2 
+2025-08-08T11:10:09.226Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T11:10:09.226Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T11:10:09.226Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T11:10:09.241Z [INFO]: calculating total payments for rental3 
+2025-08-08T11:10:09.242Z [INFO]: getting rental details service for 3 
+2025-08-08T11:10:25.706Z [INFO]: get liable rental details for user and rental id: 2, 3 
+2025-08-08T11:10:25.707Z [INFO]: checking if rental id 3 matches for tenantId 2 
+2025-08-08T11:10:25.707Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T11:10:25.707Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T11:10:25.707Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T11:10:25.718Z [INFO]: calculating total payments for rental3 
+2025-08-08T11:10:25.718Z [INFO]: getting rental details service for 3 
+2025-08-08T11:10:48.736Z [INFO]: Login user with email admin 
+2025-08-08T11:10:48.847Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T11:10:48.848Z [INFO]: get users financial summary service: 1 
+2025-08-08T11:10:48.848Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T11:10:58.754Z [INFO]: get liable rental details for user and rental id: 1, 4 
+2025-08-08T11:10:58.754Z [INFO]: checking if rental id 4 matches for tenantId 1 
+2025-08-08T11:10:58.754Z [INFO]: getting all payments for 4 for rental details 
+2025-08-08T11:10:58.754Z [INFO]: get all payments service for rentalId 4 
+2025-08-08T11:10:58.754Z [INFO]: query rental payments for rental id: 4 
+2025-08-08T11:10:58.764Z [INFO]: calculating total payments for rental4 
+2025-08-08T11:10:58.764Z [INFO]: getting rental details service for 4 
+2025-08-08T11:11:01.086Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T11:11:01.086Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T11:11:01.086Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T11:11:01.086Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T11:11:01.086Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T11:11:01.087Z [INFO]: calculating total payments for rental3 
+2025-08-08T11:11:01.087Z [INFO]: getting rental details service for 3 
+2025-08-08T11:27:35.380Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T11:27:35.381Z [INFO]: get users financial summary service: 1 
+2025-08-08T11:27:35.381Z [INFO]: get financial summary 
+2025-08-08T11:27:35.382Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T11:27:35.403Z [INFO]: get total payments by month 
+2025-08-08T11:27:35.403Z [INFO]: query payments by each month for user: 1 
+2025-08-08T11:28:20.903Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T11:28:20.905Z [INFO]: get users financial summary service: 1 
+2025-08-08T11:28:20.905Z [INFO]: get financial summary 
+2025-08-08T11:28:20.905Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T11:28:20.926Z [INFO]: get total payments by month 
+2025-08-08T11:28:20.926Z [INFO]: query payments by each month for user: 1 
+2025-08-08T11:30:34.992Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T11:30:34.993Z [INFO]: get users financial summary service: 1 
+2025-08-08T11:30:34.993Z [INFO]: get financial summary 
+2025-08-08T11:30:34.993Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T11:30:35.017Z [INFO]: get total payments by month 
+2025-08-08T11:30:35.018Z [INFO]: query payments by each month for user: 1 
+2025-08-08T11:30:56.766Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T11:30:56.767Z [INFO]: get users financial summary service: 1 
+2025-08-08T11:30:56.767Z [INFO]: get financial summary 
+2025-08-08T11:30:56.768Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T11:30:56.784Z [INFO]: get total payments by month 
+2025-08-08T11:30:56.784Z [INFO]: query payments by each month for user: 1 

@@ -1,5 +1,6 @@
 const logger = require('../utils/logger')
 const usersModels = require('../models/user.models')
+const rentalPaymentsModels = require('../models/rentalPayments.models')
 
 async function getUsersListByQuery({ name, currentUser }) {
   logger.info(`get users list by name service: ${name}`)
@@ -16,9 +17,13 @@ async function getUsersListByQuery({ name, currentUser }) {
 async function getFinancialSummaryByUserId({ userId }) {
   logger.info(`get users financial summary service: ${userId}`)
 
+  logger.info(`get financial summary`)
   const financialSummary = await usersModels.calculateUserFinancialSummary(userId)
 
-  return financialSummary
+  logger.info(`get total payments by month`)
+  const totalPaymentByMonth = await rentalPaymentsModels.findAllPaymentsForUserByMonth(userId)
+
+  return { ...financialSummary, paymentsByMonth: totalPaymentByMonth }
 }
 
 module.exports = { getUsersListByQuery, getFinancialSummaryByUserId }
