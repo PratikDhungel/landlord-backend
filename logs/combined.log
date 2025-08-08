@@ -448,3 +448,69 @@
 2025-08-08T03:23:36.186Z [INFO]: getUsersFinancialSummary for user: 1 
 2025-08-08T03:23:36.188Z [INFO]: get users financial summary service: 1 
 2025-08-08T03:23:36.189Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T03:25:27.097Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T03:25:27.099Z [INFO]: get users financial summary service: 1 
+2025-08-08T03:25:27.099Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T05:54:59.268Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-08T05:54:59.269Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-08T05:54:59.270Z [INFO]: getting all payments for 5 for rental details 
+2025-08-08T05:54:59.270Z [INFO]: get all payments service for rentalId 5 
+2025-08-08T05:54:59.270Z [INFO]: query rental payments for rental id: 5 
+2025-08-08T05:54:59.284Z [INFO]: calculating total payments for rental5 
+2025-08-08T05:54:59.284Z [INFO]: getting rental details service for 5 
+2025-08-08T06:00:06.424Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-08T06:00:06.424Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-08T06:00:06.425Z [INFO]: getting all payments for 5 for rental details 
+2025-08-08T06:00:06.426Z [INFO]: get all payments service for rentalId 5 
+2025-08-08T06:00:06.426Z [INFO]: query rental payments for rental id: 5 
+2025-08-08T06:00:06.437Z [INFO]: calculating total payments for rental5 
+2025-08-08T06:00:06.438Z [INFO]: getting rental details service for 5 
+2025-08-08T06:00:54.478Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-08T06:00:54.478Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-08T06:00:54.478Z [INFO]: getting all payments for 5 for rental details 
+2025-08-08T06:00:54.479Z [INFO]: get all payments service for rentalId 5 
+2025-08-08T06:00:54.480Z [INFO]: query rental payments for rental id: 5 
+2025-08-08T06:00:54.492Z [INFO]: calculating total payments for rental5 
+2025-08-08T06:00:54.492Z [INFO]: getting rental details service for 5 
+2025-08-08T06:04:55.851Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T06:04:55.852Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T06:04:55.854Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T06:04:55.854Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T06:04:55.855Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T06:04:55.867Z [INFO]: calculating total payments for rental3 
+2025-08-08T06:04:55.867Z [INFO]: getting rental details service for 3 
+2025-08-08T06:42:25.193Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T06:42:25.193Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T06:42:25.195Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T06:42:25.195Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T06:42:25.196Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T06:42:25.208Z [INFO]: calculating total payments for rental3 
+2025-08-08T06:42:25.208Z [INFO]: getting rental details service for 3 
+2025-08-08T06:42:31.875Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T06:42:31.876Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T06:42:31.876Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T06:42:31.876Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T06:42:31.876Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T06:42:31.879Z [INFO]: calculating total payments for rental3 
+2025-08-08T06:42:31.879Z [INFO]: getting rental details service for 3 
+2025-08-08T06:42:42.345Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T06:42:42.346Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T06:42:42.346Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T06:42:42.347Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T06:42:42.347Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T06:42:42.356Z [INFO]: calculating total payments for rental3 
+2025-08-08T06:42:42.357Z [INFO]: getting rental details service for 3 
+2025-08-08T06:42:47.830Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-08T06:42:47.830Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-08T06:42:47.830Z [INFO]: getting all payments for 5 for rental details 
+2025-08-08T06:42:47.830Z [INFO]: get all payments service for rentalId 5 
+2025-08-08T06:42:47.830Z [INFO]: query rental payments for rental id: 5 
+2025-08-08T06:42:47.832Z [INFO]: calculating total payments for rental5 
+2025-08-08T06:42:47.832Z [INFO]: getting rental details service for 5 
+2025-08-08T06:45:12.508Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-08T06:45:12.510Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-08T06:45:12.510Z [INFO]: getting all payments for 3 for rental details 
+2025-08-08T06:45:12.511Z [INFO]: get all payments service for rentalId 3 
+2025-08-08T06:45:12.511Z [INFO]: query rental payments for rental id: 3 
+2025-08-08T06:45:12.524Z [INFO]: calculating total payments for rental3 
+2025-08-08T06:45:12.524Z [INFO]: getting rental details service for 3 
