@@ -723,3 +723,200 @@
 2025-08-08T13:09:16.186Z [INFO]: query user's financial summary for user: 1 
 2025-08-08T13:09:16.211Z [INFO]: get total payments by month 
 2025-08-08T13:09:16.211Z [INFO]: query payments by each month for user: 1 
+2025-08-08T13:11:04.212Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T13:11:04.212Z [INFO]: get users financial summary service: 1 
+2025-08-08T13:11:04.213Z [INFO]: get financial summary 
+2025-08-08T13:11:04.213Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T13:11:04.236Z [INFO]: get total payments by month 
+2025-08-08T13:11:04.236Z [INFO]: query payments by each month for user: 1 
+2025-08-08T13:15:40.912Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T13:15:40.913Z [INFO]: get users financial summary service: 1 
+2025-08-08T13:15:40.913Z [INFO]: get financial summary 
+2025-08-08T13:15:40.913Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T13:15:40.932Z [INFO]: get total payments by month 
+2025-08-08T13:15:40.932Z [INFO]: query payments by each month for user: 1 
+2025-08-08T13:17:32.860Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T13:17:32.860Z [INFO]: get users financial summary service: 1 
+2025-08-08T13:17:32.860Z [INFO]: get financial summary 
+2025-08-08T13:17:32.861Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T13:17:32.873Z [INFO]: get total payments by month 
+2025-08-08T13:17:32.873Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:24:02.157Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:24:02.158Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:24:02.158Z [INFO]: get financial summary 
+2025-08-08T14:24:02.158Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:24:02.171Z [INFO]: get total payments by month 
+2025-08-08T14:24:02.171Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:29:54.203Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:29:54.204Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:29:54.204Z [INFO]: get financial summary 
+2025-08-08T14:29:54.204Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:29:54.221Z [INFO]: get total payments by month 
+2025-08-08T14:29:54.221Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:38:18.665Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:38:18.667Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:38:18.667Z [INFO]: get financial summary 
+2025-08-08T14:38:18.667Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:38:18.690Z [INFO]: get total payments by month 
+2025-08-08T14:38:18.690Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:38:19.289Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:38:19.290Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:38:19.290Z [INFO]: get financial summary 
+2025-08-08T14:38:19.290Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:38:19.292Z [INFO]: get total payments by month 
+2025-08-08T14:38:19.292Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:38:30.072Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:38:30.072Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:38:30.072Z [INFO]: get financial summary 
+2025-08-08T14:38:30.072Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:38:30.083Z [INFO]: get total payments by month 
+2025-08-08T14:38:30.083Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:41:13.913Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:41:13.913Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:41:13.913Z [INFO]: get financial summary 
+2025-08-08T14:41:13.913Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:41:13.926Z [INFO]: get total payments by month 
+2025-08-08T14:41:13.926Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:41:22.101Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:41:22.101Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:41:22.101Z [INFO]: get financial summary 
+2025-08-08T14:41:22.101Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:41:22.103Z [INFO]: get total payments by month 
+2025-08-08T14:41:22.103Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:41:37.655Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:41:37.655Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:41:37.655Z [INFO]: get financial summary 
+2025-08-08T14:41:37.655Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:41:37.667Z [INFO]: get total payments by month 
+2025-08-08T14:41:37.668Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:42:49.089Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:42:49.090Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:42:49.090Z [INFO]: get financial summary 
+2025-08-08T14:42:49.090Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:42:49.102Z [INFO]: get total payments by month 
+2025-08-08T14:42:49.102Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:50:05.852Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:50:05.853Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:50:05.853Z [INFO]: get financial summary 
+2025-08-08T14:50:05.853Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:50:05.881Z [INFO]: get total payments by month 
+2025-08-08T14:50:05.881Z [INFO]: query payments by each month for user: 1 
+2025-08-08T14:56:03.704Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T14:56:03.704Z [INFO]: get users financial summary service: 1 
+2025-08-08T14:56:03.704Z [INFO]: get financial summary 
+2025-08-08T14:56:03.705Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T14:56:03.718Z [INFO]: get total payments by month 
+2025-08-08T14:56:03.718Z [INFO]: query payments by each month for user: 1 
+2025-08-08T15:42:03.888Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T15:42:03.890Z [INFO]: get users financial summary service: 1 
+2025-08-08T15:42:03.890Z [INFO]: get financial summary 
+2025-08-08T15:42:03.890Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T15:42:03.904Z [INFO]: get total payments by month 
+2025-08-08T15:42:03.904Z [INFO]: query payments by each month for user: 1 
+2025-08-08T15:42:48.822Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T15:42:48.823Z [INFO]: get users financial summary service: 1 
+2025-08-08T15:42:48.823Z [INFO]: get financial summary 
+2025-08-08T15:42:48.823Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T15:42:48.837Z [INFO]: get total payments by month 
+2025-08-08T15:42:48.837Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:09:07.272Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:09:07.274Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:09:07.274Z [INFO]: get financial summary 
+2025-08-08T16:09:07.274Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:09:07.301Z [INFO]: get total payments by month 
+2025-08-08T16:09:07.301Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:10:02.275Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:10:02.276Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:10:02.276Z [INFO]: get financial summary 
+2025-08-08T16:10:02.276Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:10:02.291Z [INFO]: get total payments by month 
+2025-08-08T16:10:02.291Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:15:39.712Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:15:39.713Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:15:39.714Z [INFO]: get financial summary 
+2025-08-08T16:15:39.714Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:15:39.753Z [INFO]: get total payments by month 
+2025-08-08T16:15:39.754Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:15:40.265Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:15:40.265Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:15:40.266Z [INFO]: get financial summary 
+2025-08-08T16:15:40.268Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:15:40.271Z [INFO]: get total payments by month 
+2025-08-08T16:15:40.271Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:20:33.681Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:20:33.682Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:20:33.682Z [INFO]: get financial summary 
+2025-08-08T16:20:33.682Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:20:33.699Z [INFO]: get total payments by month 
+2025-08-08T16:20:33.699Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:32:37.579Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:32:37.580Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:32:37.580Z [INFO]: get financial summary 
+2025-08-08T16:32:37.580Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:32:37.603Z [INFO]: get total payments by month 
+2025-08-08T16:32:37.603Z [INFO]: query payments by each month for user: 1 
+2025-08-08T16:36:39.972Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-08T16:36:39.972Z [INFO]: get users financial summary service: 1 
+2025-08-08T16:36:39.972Z [INFO]: get financial summary 
+2025-08-08T16:36:39.972Z [INFO]: query user's financial summary for user: 1 
+2025-08-08T16:36:39.986Z [INFO]: get total payments by month 
+2025-08-08T16:36:39.987Z [INFO]: query payments by each month for user: 1 
+2025-08-09T01:45:49.111Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-09T01:45:49.112Z [INFO]: get users financial summary service: 1 
+2025-08-09T01:45:49.112Z [INFO]: get financial summary 
+2025-08-09T01:45:49.112Z [INFO]: query user's financial summary for user: 1 
+2025-08-09T01:45:49.145Z [INFO]: get total payments by month 
+2025-08-09T01:45:49.145Z [INFO]: query payments by each month for user: 1 
+2025-08-09T01:54:43.942Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-09T01:54:43.944Z [INFO]: get users financial summary service: 1 
+2025-08-09T01:54:43.944Z [INFO]: get financial summary 
+2025-08-09T01:54:43.945Z [INFO]: query user's financial summary for user: 1 
+2025-08-09T01:54:44.021Z [INFO]: get total payments by month 
+2025-08-09T01:54:44.022Z [INFO]: query payments by each month for user: 1 
+2025-08-09T02:10:01.144Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-09T02:10:01.145Z [INFO]: get users financial summary service: 1 
+2025-08-09T02:10:01.145Z [INFO]: get financial summary 
+2025-08-09T02:10:01.146Z [INFO]: query user's financial summary for user: 1 
+2025-08-09T02:10:01.173Z [INFO]: get total payments by month 
+2025-08-09T02:10:01.173Z [INFO]: query payments by each month for user: 1 
+2025-08-09T02:23:15.635Z [INFO]: get liable rental details for user and rental id: 1, 5 
+2025-08-09T02:23:15.637Z [INFO]: checking if rental id 5 matches for tenantId 1 
+2025-08-09T02:23:15.638Z [INFO]: getting all payments for 5 for rental details 
+2025-08-09T02:23:15.639Z [INFO]: get all payments service for rentalId 5 
+2025-08-09T02:23:15.640Z [INFO]: query rental payments for rental id: 5 
+2025-08-09T02:23:15.652Z [INFO]: calculating total payments for rental5 
+2025-08-09T02:23:15.653Z [INFO]: getting rental details service for 5 
+2025-08-09T02:23:22.484Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-09T02:23:22.484Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-09T02:23:22.484Z [INFO]: getting all payments for 3 for rental details 
+2025-08-09T02:23:22.485Z [INFO]: get all payments service for rentalId 3 
+2025-08-09T02:23:22.485Z [INFO]: query rental payments for rental id: 3 
+2025-08-09T02:23:22.487Z [INFO]: calculating total payments for rental3 
+2025-08-09T02:23:22.487Z [INFO]: getting rental details service for 3 
+2025-08-09T02:23:23.801Z [INFO]: get liable rental details for user and rental id: 1, 4 
+2025-08-09T02:23:23.801Z [INFO]: checking if rental id 4 matches for tenantId 1 
+2025-08-09T02:23:23.801Z [INFO]: getting all payments for 4 for rental details 
+2025-08-09T02:23:23.802Z [INFO]: get all payments service for rentalId 4 
+2025-08-09T02:23:23.802Z [INFO]: query rental payments for rental id: 4 
+2025-08-09T02:23:23.804Z [INFO]: calculating total payments for rental4 
+2025-08-09T02:23:23.804Z [INFO]: getting rental details service for 4 
+2025-08-09T15:32:46.517Z [INFO]: Login user with email admin 
+2025-08-09T15:32:46.641Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-09T15:32:46.641Z [INFO]: get users financial summary service: 1 
+2025-08-09T15:32:46.641Z [INFO]: get financial summary 
+2025-08-09T15:32:46.641Z [INFO]: query user's financial summary for user: 1 
+2025-08-09T15:32:46.644Z [INFO]: get total payments by month 
+2025-08-09T15:32:46.644Z [INFO]: query payments by each month for user: 1 
+2025-08-09T15:34:59.110Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-09T15:34:59.111Z [INFO]: get users financial summary service: 1 
+2025-08-09T15:34:59.111Z [INFO]: get financial summary 
+2025-08-09T15:34:59.112Z [INFO]: query user's financial summary for user: 1 
+2025-08-09T15:34:59.129Z [INFO]: get total payments by month 
+2025-08-09T15:34:59.129Z [INFO]: query payments by each month for user: 1 
+2025-08-09T15:34:59.131Z [ERROR]: getUsersFinancialSummary error: bind message supplies 1 parameters, but prepared statement "" requires 0 {"stack":"error: bind message supplies 1 parameters, but prepared statement \"\" requires 0\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.findAllPaymentsForUserByMonth (/app/src/models/rentalPayments.models.js:56:15)\n    at async Object.getFinancialSummaryByUserId (/app/src/services/users.services.js:24:31)\n    at async getUsersFinancialSummary (/app/src/controllers/users.controllers.js:27:23)"}
+2025-08-09T15:35:12.980Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-09T15:35:12.981Z [INFO]: get users financial summary service: 1 
+2025-08-09T15:35:12.982Z [INFO]: get financial summary 
+2025-08-09T15:35:12.982Z [INFO]: query user's financial summary for user: 1 
+2025-08-09T15:35:12.999Z [INFO]: get total payments by month 
+2025-08-09T15:35:12.999Z [INFO]: query payments by each month for user: 1 

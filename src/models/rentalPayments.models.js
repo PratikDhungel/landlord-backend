@@ -29,20 +29,27 @@ async function findAllPaymentsForUserByMonth(userId) {
   // Query helped by ClaudeAI
   // Generate past 12 months with reference from current month using CTE
   // Get name of each month and start date
-  // Sum total payment from rental_payments table when the month value for payment_date matches the month from month_series
+  // Get all payment date and amount of matching user id
+  // Sum payment amounts and group by each month
   const query = `
   WITH month_series AS (
     SELECT 
         DATE_TRUNC('month', CURRENT_DATE) - INTERVAL '11 months' + 
         INTERVAL '1 month' * generate_series(0, 11) AS month
+  ),
+  owner_received_payments AS (
+    SELECT 
+        rp.payment_date,
+        rp.amount
+    FROM rental_payments rp 
+    JOIN rentals r ON rp.rental_id = r.id
+    WHERE r.owner_id = $1
   )
-  SELECT
+  SELECT 
     TO_CHAR(ms.month, 'Mon YYYY') AS month,
-    COALESCE(SUM(rp.amount), 0) AS total_payments
+    COALESCE(SUM(orp.amount), 0) AS total_earnings
   FROM month_series ms
-  LEFT JOIN rental_payments rp ON DATE_TRUNC('month', rp.payment_date) = ms.month
-  LEFT JOIN rentals re ON rp.rental_id = re.id
-  WHERE re.owner_id = $1
+  LEFT JOIN owner_received_payments orp ON DATE_TRUNC('month', orp.payment_date) = ms.month
   GROUP BY ms.month
   ORDER BY ms.month;
   `
