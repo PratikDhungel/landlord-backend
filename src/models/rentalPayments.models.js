@@ -47,7 +47,7 @@ async function findAllPaymentsForUserByMonth(userId) {
   )
   SELECT 
     TO_CHAR(ms.month, 'Mon YYYY') AS month,
-    COALESCE(SUM(orp.amount), 0) AS total_earnings
+    COALESCE(SUM(orp.amount), 0) AS earnings
   FROM month_series ms
   LEFT JOIN owner_received_payments orp ON DATE_TRUNC('month', orp.payment_date) = ms.month
   GROUP BY ms.month

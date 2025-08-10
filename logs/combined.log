@@ -920,3 +920,33 @@
 2025-08-09T15:35:12.982Z [INFO]: query user's financial summary for user: 1 
 2025-08-09T15:35:12.999Z [INFO]: get total payments by month 
 2025-08-09T15:35:12.999Z [INFO]: query payments by each month for user: 1 
+2025-08-10T03:55:36.268Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-10T03:55:36.270Z [INFO]: get users financial summary service: 1 
+2025-08-10T03:55:36.270Z [INFO]: get financial summary 
+2025-08-10T03:55:36.270Z [INFO]: query user's financial summary for user: 1 
+2025-08-10T03:55:36.298Z [INFO]: get total payments by month 
+2025-08-10T03:55:36.298Z [INFO]: query payments by each month for user: 1 
+2025-08-10T10:17:08.411Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-10T10:17:08.412Z [INFO]: get users financial summary service: 1 
+2025-08-10T10:17:08.412Z [INFO]: get financial summary 
+2025-08-10T10:17:08.412Z [INFO]: query user's financial summary for user: 1 
+2025-08-10T10:17:08.429Z [INFO]: get total payments by month 
+2025-08-10T10:17:08.429Z [INFO]: query payments by each month for user: 1 
+2025-08-10T10:23:51.525Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-10T10:23:51.526Z [INFO]: get users financial summary service: 1 
+2025-08-10T10:23:51.526Z [INFO]: get financial summary 
+2025-08-10T10:23:51.527Z [INFO]: query user's financial summary for user: 1 
+2025-08-10T10:23:51.543Z [INFO]: get total payments by month 
+2025-08-10T10:23:51.543Z [INFO]: query payments by each month for user: 1 
+2025-08-10T10:24:16.722Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-10T10:24:16.722Z [INFO]: get users financial summary service: 1 
+2025-08-10T10:24:16.723Z [INFO]: get financial summary 
+2025-08-10T10:24:16.723Z [INFO]: query user's financial summary for user: 1 
+2025-08-10T10:24:16.732Z [INFO]: get total payments by month 
+2025-08-10T10:24:16.733Z [INFO]: query payments by each month for user: 1 
+2025-08-10T10:24:50.937Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-10T10:24:50.938Z [INFO]: get users financial summary service: 1 
+2025-08-10T10:24:50.938Z [INFO]: get financial summary 
+2025-08-10T10:24:50.938Z [INFO]: query user's financial summary for user: 1 
+2025-08-10T10:24:50.950Z [INFO]: get total payments by month 
+2025-08-10T10:24:50.950Z [INFO]: query payments by each month for user: 1 
