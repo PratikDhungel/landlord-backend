@@ -1512,3 +1512,110 @@
 2025-08-13T08:07:47.329Z [INFO]: query user's financial summary for user: 1 
 2025-08-13T08:07:47.330Z [INFO]: get total payments by month 
 2025-08-13T08:07:47.331Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:14:09.866Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:14:09.869Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:14:09.869Z [INFO]: get financial summary 
+2025-08-13T08:14:09.870Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:14:09.897Z [INFO]: get total payments by month 
+2025-08-13T08:14:09.897Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:14:10.004Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:14:10.004Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:14:10.004Z [INFO]: get financial summary 
+2025-08-13T08:14:10.004Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:14:10.006Z [INFO]: get total payments by month 
+2025-08-13T08:14:10.006Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:22:31.641Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:22:31.641Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:22:31.641Z [INFO]: get financial summary 
+2025-08-13T08:22:31.642Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:22:31.658Z [INFO]: get total payments by month 
+2025-08-13T08:22:31.659Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:22:31.996Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:22:31.996Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:22:31.996Z [INFO]: get financial summary 
+2025-08-13T08:22:31.996Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:22:31.998Z [INFO]: get total payments by month 
+2025-08-13T08:22:31.998Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:25:13.698Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:25:13.698Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:25:13.698Z [INFO]: get financial summary 
+2025-08-13T08:25:13.699Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:25:13.712Z [INFO]: get total payments by month 
+2025-08-13T08:25:13.712Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:25:22.637Z [INFO]: Login user with email admin 
+2025-08-13T08:29:58.248Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:29:58.249Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:29:58.249Z [INFO]: get financial summary 
+2025-08-13T08:29:58.249Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:29:58.275Z [INFO]: get total payments by month 
+2025-08-13T08:29:58.275Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:30:14.937Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:30:14.937Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:30:14.938Z [INFO]: get financial summary 
+2025-08-13T08:30:14.938Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:30:14.955Z [INFO]: get total payments by month 
+2025-08-13T08:30:14.955Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:31:21.592Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:31:21.593Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:31:21.593Z [INFO]: get financial summary 
+2025-08-13T08:31:21.593Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:31:21.597Z [INFO]: get total payments by month 
+2025-08-13T08:31:21.597Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:32:11.260Z [INFO]: Login user with email admin 
+2025-08-13T08:53:14.069Z [INFO]: update user profile picture url service: 1 
+2025-08-13T08:53:14.072Z [INFO]: upload file to bucket service for file: 1755075194071-e9a266f7-5c95-4403-af48-f44a1345cb57 
+2025-08-13T08:53:15.487Z [ERROR]: Successfully uploaded file to bucket 
+2025-08-13T08:53:15.662Z [INFO]: query to update user profile picture file path: 1 
+2025-08-13T08:54:22.519Z [INFO]: update user profile picture url service: 1 
+2025-08-13T08:54:22.520Z [INFO]: upload file to bucket service for file: 1755075262520-cb184f0e-f0dd-47f2-9095-800307f4c7dd 
+2025-08-13T08:54:23.484Z [ERROR]: Successfully uploaded file to bucket 
+2025-08-13T08:54:23.735Z [INFO]: query to update user profile picture file path: 1 
+2025-08-13T08:55:16.497Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:55:16.498Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:55:16.498Z [INFO]: get financial summary 
+2025-08-13T08:55:16.498Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:55:16.514Z [INFO]: get total payments by month 
+2025-08-13T08:55:16.514Z [INFO]: query payments by each month for user: 1 
+2025-08-13T10:50:42.655Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T10:50:42.656Z [INFO]: get users financial summary service: 1 
+2025-08-13T10:50:42.656Z [INFO]: get financial summary 
+2025-08-13T10:50:42.656Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T10:50:42.680Z [INFO]: get total payments by month 
+2025-08-13T10:50:42.680Z [INFO]: query payments by each month for user: 1 
+2025-08-13T10:58:28.351Z [INFO]: Registering user with email:  
+2025-08-13T10:58:28.426Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:58:28.995Z [INFO]: Registering user with email:  
+2025-08-13T10:58:29.078Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:58:29.162Z [INFO]: Registering user with email:  
+2025-08-13T10:58:29.227Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:58:29.351Z [INFO]: Registering user with email:  
+2025-08-13T10:58:29.421Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:52.603Z [INFO]: Registering user with email:  
+2025-08-13T10:59:52.686Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:53.501Z [INFO]: Registering user with email:  
+2025-08-13T10:59:53.587Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:53.917Z [INFO]: Registering user with email:  
+2025-08-13T10:59:53.999Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:54.166Z [INFO]: Registering user with email:  
+2025-08-13T10:59:54.247Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:54.680Z [INFO]: Registering user with email:  
+2025-08-13T10:59:54.762Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:55.161Z [INFO]: Registering user with email:  
+2025-08-13T10:59:55.244Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T10:59:55.313Z [INFO]: Registering user with email:  
+2025-08-13T10:59:55.376Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T11:06:02.820Z [INFO]: Registering user with email: johndoetwo 
+2025-08-13T11:06:02.905Z [ERROR]: Register user error: null value in column "first_name" of relation "users" violates not-null constraint {"stack":"error: null value in column \"first_name\" of relation \"users\" violates not-null constraint\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async createUser (/app/src/models/user.models.js:15:15)\n    at async Object.register (/app/src/services/auth.services.js:19:16)\n    at async register (/app/src/controllers/auth.controllers.js:18:29)"}
+2025-08-13T11:06:25.951Z [INFO]: Registering user with email: johndoetwo 
+2025-08-13T11:06:26.076Z [INFO]: getUsersFinancialSummary for user: 16 
+2025-08-13T11:06:26.076Z [INFO]: get users financial summary service: 16 
+2025-08-13T11:06:26.077Z [INFO]: get financial summary 
+2025-08-13T11:06:26.077Z [INFO]: query user's financial summary for user: 16 
+2025-08-13T11:06:26.079Z [INFO]: get total payments by month 
+2025-08-13T11:06:26.079Z [INFO]: query payments by each month for user: 16 
+2025-08-13T11:06:38.283Z [INFO]: getUsersFinancialSummary for user: 16 
+2025-08-13T11:06:38.283Z [INFO]: get users financial summary service: 16 
+2025-08-13T11:06:38.283Z [INFO]: get financial summary 
+2025-08-13T11:06:38.283Z [INFO]: query user's financial summary for user: 16 
+2025-08-13T11:06:38.294Z [INFO]: get total payments by month 
+2025-08-13T11:06:38.295Z [INFO]: query payments by each month for user: 16 

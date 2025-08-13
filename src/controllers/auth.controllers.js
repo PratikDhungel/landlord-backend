@@ -5,8 +5,17 @@ const logger = require('../utils/logger')
 const register = async (req, res, next) => {
   logger.info(`Registering user with email: ${req.body.email}`)
 
+  const { email, first_name, last_name, password } = req.body
+
+  const newUserPayload = {
+    email,
+    firstName: first_name,
+    lastName: last_name,
+    password,
+  }
+
   try {
-    const { user, token } = await authService.register(req.body)
+    const { user, token } = await authService.register(newUserPayload)
     res.status(201).json({ user, token })
   } catch (err) {
     logger.error(`Register user error: ${err.message}`, { stack: err.stack })
