@@ -2,7 +2,9 @@ const { generateUserToken, generateRefreshToken } = require('../utils/jwt')
 const { hashPassword, comparePassword } = require('../utils/hash')
 const { findUserByEmail, createUser, updateLastLoggedIn } = require('../models/user.models')
 const { updateUserTokens, findTokenByHash } = require('../models/userToken.models')
+const { getSignedFileUrlFromPath } = require('./supabase.services')
 const { BadRequestError } = require('../utils/errors')
+const logger = require('../utils/logger')
 
 require('dotenv').config()
 
@@ -35,9 +37,18 @@ const login = async ({ email, password }) => {
 
   await updateUserTokens({ userId: user.id, refreshToken, expiresAt })
 
-  const { password_hash, ...userInfo } = user
+  const { password_hash, avatar_url: bucketFilePath, ...userInfo } = user
 
-  return { ...userInfo, token, refreshToken }
+  let avatarUrl = ''
+
+  try {
+    const { signedFileUrl } = await getSignedFileUrlFromPath(bucketFilePath)
+    avatarUrl = signedFileUrl
+  } catch {
+    logger.error('Error fetching signed profile picture url during login')
+  }
+
+  return { ...userInfo, avatarUrl, token, refreshToken }
 }
 
 const refresh = async ({ refreshToken, user }) => {

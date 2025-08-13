@@ -1479,3 +1479,24 @@
 2025-08-13T07:49:57.420Z [INFO]: upload file to bucket service for file: 1755071397419-1e29b5b8-bffd-4e65-814a-13612eb9714e 
 2025-08-13T07:49:58.826Z [ERROR]: Successfully uploaded file to bucket 
 2025-08-13T07:49:59.061Z [INFO]: query to update user profile picture file path: 1 
+2025-08-13T07:54:24.923Z [INFO]: Login user with email admin 
+2025-08-13T07:54:25.044Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T07:54:25.045Z [INFO]: get users financial summary service: 1 
+2025-08-13T07:54:25.045Z [INFO]: get financial summary 
+2025-08-13T07:54:25.045Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T07:54:25.047Z [INFO]: get total payments by month 
+2025-08-13T07:54:25.047Z [INFO]: query payments by each month for user: 1 
+2025-08-13T07:54:54.923Z [INFO]: Login user with email admin 
+2025-08-13T07:55:41.208Z [INFO]: Login user with email admin 
+2025-08-13T07:56:00.394Z [INFO]: Login user with email admin 
+2025-08-13T08:05:23.923Z [INFO]: Login user with email admin 
+2025-08-13T08:05:25.165Z [ERROR]: Login user error: signedFileUrl is not defined {"stack":"ReferenceError: signedFileUrl is not defined\n    at Object.login (/app/src/services/auth.services.js:51:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
+2025-08-13T08:05:47.275Z [INFO]: Login user with email admin 
+2025-08-13T08:05:47.843Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:05:47.844Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:05:47.844Z [INFO]: get financial summary 
+2025-08-13T08:05:47.844Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:05:47.847Z [INFO]: get total payments by month 
+2025-08-13T08:05:47.847Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:06:27.726Z [INFO]: Login user with email admin 
+2025-08-13T08:06:27.805Z [ERROR]: Error fetching signed profile picture url during login 

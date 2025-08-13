@@ -34,3 +34,5 @@
 2025-08-13T06:12:33.971Z [ERROR]: Error fetching file from subpabase: photos-project/1755065552381-2b1f3641-4b58-4257-81e5-affc1a818949 
 2025-08-13T06:14:54.715Z [ERROR]: Error fetching file from supabase: photos-project/1755065693131-bae8d8a0-8cc4-4999-a21e-9a4ab419b124 
 2025-08-13T07:49:58.826Z [ERROR]: Successfully uploaded file to bucket 
+2025-08-13T08:05:25.165Z [ERROR]: Login user error: signedFileUrl is not defined {"stack":"ReferenceError: signedFileUrl is not defined\n    at Object.login (/app/src/services/auth.services.js:51:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (/app/src/controllers/auth.controllers.js:21:22)"}
+2025-08-13T08:06:27.805Z [ERROR]: Error fetching signed profile picture url during login 

@@ -3,7 +3,7 @@ const logger = require('../utils/logger')
 
 const findUserByEmail = async (email) => {
   const query = `
-  SELECT id, email, password_hash, first_name, last_name, role, is_active, created_at, updated_at FROM users
+  SELECT id, email, password_hash, avatar_url, first_name, last_name, role, is_active, created_at, updated_at FROM users
   WHERE email = $1
   `
 
