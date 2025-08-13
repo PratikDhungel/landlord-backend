@@ -1,5 +1,6 @@
 const logger = require('../utils/logger')
 const usersServices = require('../services/users.services')
+const { BadRequestError } = require('../utils/errors')
 
 async function getUsersList(req, res, next) {
   try {
@@ -24,6 +25,7 @@ async function getUsersFinancialSummary(req, res, next) {
 
     logger.info(`getUsersFinancialSummary for user: ${currentUser.id}`)
 
+    // TODO update variable name
     const usersList = await usersServices.getFinancialSummaryByUserId({ userId: currentUser.id })
 
     res.status(201).json(usersList)
@@ -34,4 +36,21 @@ async function getUsersFinancialSummary(req, res, next) {
   }
 }
 
-module.exports = { getUsersList, getUsersFinancialSummary }
+async function updateUserProfilePicture(req, res, next) {
+  try {
+    console.log('file', req.file)
+
+    if (!req.file) {
+      throw new BadRequestError('No file available')
+    }
+
+    const filePathResponse = await usersServices.uploadProfilePictureToBucket(req.file)
+
+    res.status(201).json(filePathResponse)
+  } catch (err) {
+    console.log(err)
+    next(err)
+  }
+}
+
+module.exports = { getUsersList, getUsersFinancialSummary, updateUserProfilePicture }
