@@ -45,15 +45,15 @@ async function uploadProfilePictureToBucket(file) {
     throw new AppError('Error uploading file to supabase')
   }
 
-  const filePath = data.fullPath
+  const filePath = data.path
 
   const { data: singedData, error: signedDataError } = await supabaseClient.storage
     .from(supabaseBucket)
     .createSignedUrl(filePath, 86400)
 
   if (signedDataError) {
-    logger.error(`Error fetching file from subpabase: ${filePath}`)
-    throw new AppError('Error fetching file from subpabase')
+    logger.error(`Error fetching file from supabase: ${filePath}`)
+    throw new AppError('Error fetching file from supabase')
   }
 
   return {
