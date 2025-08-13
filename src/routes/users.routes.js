@@ -8,7 +8,7 @@ const router = express.Router()
 router.get('/search', authenticateJWT, usersControllers.getUsersList)
 router.get('/financial-summary', authenticateJWT, usersControllers.getUsersFinancialSummary)
 router.post(
-  '/profile/upload',
+  '/profile/upload-picture',
   authenticateJWT,
   uploadFile.single('file'),
   usersControllers.updateUserProfilePicture,
