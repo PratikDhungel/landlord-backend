@@ -1468,3 +1468,14 @@
 2025-08-13T06:41:27.216Z [INFO]: query user's financial summary for user: 1 
 2025-08-13T06:41:27.233Z [INFO]: get total payments by month 
 2025-08-13T06:41:27.234Z [INFO]: query payments by each month for user: 1 
+2025-08-13T07:31:43.983Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T07:31:43.986Z [INFO]: get users financial summary service: 1 
+2025-08-13T07:31:43.987Z [INFO]: get financial summary 
+2025-08-13T07:31:43.987Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T07:31:44.012Z [INFO]: get total payments by month 
+2025-08-13T07:31:44.013Z [INFO]: query payments by each month for user: 1 
+2025-08-13T07:49:31.852Z [INFO]: update user profile picture url service: 1 
+2025-08-13T07:49:57.418Z [INFO]: update user profile picture url service: 1 
+2025-08-13T07:49:57.420Z [INFO]: upload file to bucket service for file: 1755071397419-1e29b5b8-bffd-4e65-814a-13612eb9714e 
+2025-08-13T07:49:58.826Z [ERROR]: Successfully uploaded file to bucket 
+2025-08-13T07:49:59.061Z [INFO]: query to update user profile picture file path: 1 

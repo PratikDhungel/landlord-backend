@@ -58,10 +58,21 @@ async function calculateUserFinancialSummary(userId) {
   return res.rows[0]
 }
 
+async function updateUserProfilePictureFilePath({ userId, filePath }) {
+  logger.info(`query to update user profile picture file path: ${userId}`)
+
+  const query = `
+  UPDATE users SET avatar_url = $1, updated_at = NOW() WHERE id = $2
+  `
+
+  await db.query(query, [filePath, userId])
+}
+
 module.exports = {
   findUserByEmail,
   createUser,
   updateLastLoggedIn,
   findUsersByName,
   calculateUserFinancialSummary,
+  updateUserProfilePictureFilePath,
 }

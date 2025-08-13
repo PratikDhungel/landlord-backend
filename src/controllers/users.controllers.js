@@ -38,15 +38,21 @@ async function getUsersFinancialSummary(req, res, next) {
 
 async function updateUserProfilePicture(req, res, next) {
   try {
-    console.log('file', req.file)
+    const currentUser = req.user
 
     if (!req.file) {
       throw new BadRequestError('No file available')
     }
 
-    const filePathResponse = await usersServices.uploadProfilePictureToBucket(req.file)
+    const file = req.file
+    const userId = currentUser.id
 
-    res.status(201).json(filePathResponse)
+    const uploadedFileLink = await usersServices.updateUserProfilePictureUrl({
+      file,
+      userId,
+    })
+
+    res.status(201).json(uploadedFileLink)
   } catch (err) {
     console.log(err)
     next(err)

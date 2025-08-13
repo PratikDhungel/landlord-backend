@@ -1,12 +1,7 @@
-require('dotenv').config()
-const { v4: uuidV4 } = require('uuid')
 const logger = require('../utils/logger')
 const usersModels = require('../models/user.models')
 const rentalPaymentsModels = require('../models/rentalPayments.models')
-const { supabaseClient } = require('../db/supabase')
-const { AppError } = require('../utils/errors')
-
-const supabaseBucket = process.env.SUPABASE_BUCKET
+const { uploadfileToBucket } = require('./supabase.services')
 
 async function getUsersListByQuery({ name, currentUser }) {
   logger.info(`get users list by name service: ${name}`)
@@ -32,33 +27,19 @@ async function getFinancialSummaryByUserId({ userId }) {
   return { ...financialSummary, paymentsByMonth: totalPaymentByMonth }
 }
 
-async function uploadProfilePictureToBucket(file) {
-  const fileName = `${Date.now()}-${uuidV4()}`
+async function updateUserProfilePictureUrl({ file, userId }) {
+  logger.info(`update user profile picture url service: ${userId}`)
 
-  const { data, error } = await supabaseClient.storage.from(supabaseBucket).upload(fileName, file.buffer, {
-    contentType: file.mimetype,
-    upsert: false,
-  })
+  const { filePath, signedFileUrl: avatarUrl } = await uploadfileToBucket(file)
 
-  if (error) {
-    logger.error(`Error uploading file to supabase`)
-    throw new AppError('Error uploading file to supabase')
-  }
+  await usersModels.updateUserProfilePictureFilePath({ userId, filePath })
 
-  const filePath = data.path
-
-  const { data: singedData, error: signedDataError } = await supabaseClient.storage
-    .from(supabaseBucket)
-    .createSignedUrl(filePath, 86400)
-
-  if (signedDataError) {
-    logger.error(`Error fetching file from supabase: ${filePath}`)
-    throw new AppError('Error fetching file from supabase')
-  }
-
-  return {
-    avatarUrl: singedData.signedUrl,
-  }
+  return { avatarUrl }
 }
 
-module.exports = { getUsersListByQuery, getFinancialSummaryByUserId, uploadProfilePictureToBucket }
+module.exports = {
+  getUsersListByQuery,
+  getFinancialSummaryByUserId,
+  updateUserProfilePictureUrl,
+  uploadfileToBucket,
+}
