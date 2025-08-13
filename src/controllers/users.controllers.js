@@ -25,10 +25,9 @@ async function getUsersFinancialSummary(req, res, next) {
 
     logger.info(`getUsersFinancialSummary for user: ${currentUser.id}`)
 
-    // TODO update variable name
-    const usersList = await usersServices.getFinancialSummaryByUserId({ userId: currentUser.id })
+    const userFinancialSummary = await usersServices.getFinancialSummaryByUserId({ userId: currentUser.id })
 
-    res.status(201).json(usersList)
+    res.status(201).json(userFinancialSummary)
   } catch (err) {
     logger.error(`getUsersFinancialSummary error: ${err.message}`, { stack: err.stack })
 

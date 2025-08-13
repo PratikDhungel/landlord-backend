@@ -1500,3 +1500,15 @@
 2025-08-13T08:05:47.847Z [INFO]: query payments by each month for user: 1 
 2025-08-13T08:06:27.726Z [INFO]: Login user with email admin 
 2025-08-13T08:06:27.805Z [ERROR]: Error fetching signed profile picture url during login 
+2025-08-13T08:07:44.230Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:07:44.233Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:07:44.234Z [INFO]: get financial summary 
+2025-08-13T08:07:44.234Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:07:44.248Z [INFO]: get total payments by month 
+2025-08-13T08:07:44.249Z [INFO]: query payments by each month for user: 1 
+2025-08-13T08:07:47.327Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-13T08:07:47.328Z [INFO]: get users financial summary service: 1 
+2025-08-13T08:07:47.328Z [INFO]: get financial summary 
+2025-08-13T08:07:47.329Z [INFO]: query user's financial summary for user: 1 
+2025-08-13T08:07:47.330Z [INFO]: get total payments by month 
+2025-08-13T08:07:47.331Z [INFO]: query payments by each month for user: 1 
