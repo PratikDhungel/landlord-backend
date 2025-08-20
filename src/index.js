@@ -4,6 +4,7 @@ const express = require('express')
 const authRoutes = require('./routes/auth.routes')
 const rentalRoutes = require('./routes/rentals.routes')
 const usersRoutes = require('./routes/users.routes')
+const rentalPaymentsRoutes = require('./routes/rentalPayments.routes')
 
 const { errorHandler } = require('./middlewares/errorHandler')
 const camelCaseResponseMiddleware = require('./middlewares/camelCaseResponse')
@@ -24,6 +25,7 @@ app.use('/api/auth', authRoutes)
 
 app.use('/api/rentals', rentalRoutes)
 app.use('/api/users', usersRoutes)
+app.use('/api/payments', rentalPaymentsRoutes)
 
 app.get('/', async (_, res) => {
   res.send(`Server is now running`)

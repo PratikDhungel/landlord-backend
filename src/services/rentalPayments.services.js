@@ -1,5 +1,6 @@
-const rentalPaymentsModels = require('../models/rentalPayments.models')
 const logger = require('../utils/logger')
+const rentalPaymentsModels = require('../models/rentalPayments.models')
+const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
 
 async function recordPaymentForRental(rentalPaymentPayload) {
   const rentals = await rentalPaymentsModels.createRentalPayment(rentalPaymentPayload)
@@ -19,4 +20,26 @@ async function getAllRentalPaymentWithTotal(rentalId) {
   return { payments: rentalPayments, total: totalPaymentAmount }
 }
 
-module.exports = { recordPaymentForRental, getAllRentalPaymentWithTotal }
+async function approvePaymentForRental(paymentId) {
+  logger.info(`approve rental payment service for payment ${paymentId}`)
+
+  const rentalPaymentDetails = await rentalPaymentsModels.findPaymentById(paymentId)
+
+  // TODO Add check to see if rental owner is current user
+
+  if (!rentalPaymentDetails) {
+    throw new BadRequestError('Payment with id does not exist')
+  }
+
+  if (rentalPaymentDetails.status === RENTAL_PAYMENTS_STATUS.APPROVED) {
+    throw new BadRequestError('Payment has already been approved')
+  }
+
+  logger.info(`updating rental payment status to approved`)
+
+  await rentalPaymentsModels.updatePaymentStatusToApproved(paymentId)
+
+  return { status: 'approved' }
+}
+
+module.exports = { recordPaymentForRental, getAllRentalPaymentWithTotal, approvePaymentForRental }

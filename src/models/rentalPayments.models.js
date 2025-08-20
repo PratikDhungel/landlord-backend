@@ -1,12 +1,24 @@
 const db = require('../db/db')
 const logger = require('../utils/logger')
 
+const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
+const { AppError } = require('../utils/errors')
+
 async function createRentalPayment({ rentalId, payerId, amount, paymentDate }) {
   const res = await db.query(
     `INSERT INTO rental_payments (rental_id, payer_id, amount, payment_date)
      VALUES ($1, $2, $3, $4)
      RETURNING *`,
     [rentalId, payerId, amount, paymentDate],
+  )
+  return res.rows[0]
+}
+
+async function findPaymentById(rentalId) {
+  const res = await db.query(
+    `SELECT * from rental_payments
+     WHERE id = $1`,
+    [rentalId],
   )
   return res.rows[0]
 }
@@ -58,4 +70,28 @@ async function findAllPaymentsForUserByMonth(userId) {
   return res.rows
 }
 
-module.exports = { createRentalPayment, findAllPaymentsByRentalId, findAllPaymentsForUserByMonth }
+async function updatePaymentStatusToApproved(paymentId) {
+  logger.info(`query rental payments for rental id: ${paymentId}`)
+
+  try {
+    const res = await db.query(
+      `UPDATE rental_payments SET status = $2, updated_at = NOW()
+      WHERE id = $1`,
+      [paymentId, RENTAL_PAYMENTS_STATUS.APPROVED],
+    )
+
+    return res.rows[0]
+  } catch (err) {
+    logger.error(`error while updating payment ${paymentId} to approved status`, { stack: err.stack })
+
+    throw new AppError('Error while updating payment status to approved')
+  }
+}
+
+module.exports = {
+  createRentalPayment,
+  findPaymentById,
+  findAllPaymentsByRentalId,
+  findAllPaymentsForUserByMonth,
+  updatePaymentStatusToApproved,
+}

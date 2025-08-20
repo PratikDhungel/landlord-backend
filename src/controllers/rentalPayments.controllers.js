@@ -39,4 +39,16 @@ async function recordPaymentForRental(req, res, next) {
   }
 }
 
-module.exports = { recordPaymentForRental }
+async function approvePaymentForRental(req, res, next) {
+  try {
+    const paymentId = req.params.id
+
+    const approvedPaymentResponse = await rentalPaymentsServices.approvePaymentForRental(paymentId)
+
+    res.status(201).json(approvedPaymentResponse)
+  } catch (err) {
+    next(err)
+  }
+}
+
+module.exports = { recordPaymentForRental, approvePaymentForRental }
