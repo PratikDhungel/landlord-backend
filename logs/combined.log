@@ -1884,3 +1884,15 @@
 2025-08-20T07:39:25.517Z [INFO]: query rental payments for rental id: 4 
 2025-08-20T07:39:25.528Z [INFO]: calculating total payments for rental4 
 2025-08-20T07:39:25.528Z [INFO]: getting rental details service for 4 
+2025-08-20T07:43:39.024Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-20T07:43:39.025Z [INFO]: get users financial summary service: 1 
+2025-08-20T07:43:39.026Z [INFO]: get financial summary 
+2025-08-20T07:43:39.026Z [INFO]: query user's financial summary for user: 1 
+2025-08-20T07:43:39.044Z [INFO]: get total payments by month 
+2025-08-20T07:43:39.044Z [INFO]: query payments by each month for user: 1 
+2025-08-20T07:43:40.333Z [INFO]: getUsersFinancialSummary for user: 1 
+2025-08-20T07:43:40.334Z [INFO]: get users financial summary service: 1 
+2025-08-20T07:43:40.335Z [INFO]: get financial summary 
+2025-08-20T07:43:40.335Z [INFO]: query user's financial summary for user: 1 
+2025-08-20T07:43:40.338Z [INFO]: get total payments by month 
+2025-08-20T07:43:40.338Z [INFO]: query payments by each month for user: 1 

@@ -22,7 +22,7 @@ async function getFinancialSummaryByUserId({ userId }) {
   const financialSummary = await usersModels.calculateUserFinancialSummary(userId)
 
   logger.info(`get total payments by month`)
-  const totalPaymentByMonth = await rentalPaymentsModels.findAllPaymentsForUserByMonth(userId)
+  const totalPaymentByMonth = await rentalPaymentsModels.findAllApprovedPaymentsForUserByMonth(userId)
 
   return { ...financialSummary, paymentsByMonth: totalPaymentByMonth }
 }

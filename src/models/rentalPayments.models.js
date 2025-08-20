@@ -33,7 +33,7 @@ async function findAllApprovedPaymentsByRentalId(rentalId) {
   try {
     const query = `
     SELECT * from rental_payments
-    WHERE rental_id = $1 and status = $2
+    WHERE rental_id = $1 AND status = $2
     `
 
     const res = await db.query(query, [rentalId, RENTAL_PAYMENTS_STATUS.APPROVED])
@@ -44,7 +44,7 @@ async function findAllApprovedPaymentsByRentalId(rentalId) {
   }
 }
 
-async function findAllPaymentsForUserByMonth(userId) {
+async function findAllApprovedPaymentsForUserByMonth(userId) {
   logger.info(`query payments by each month for user: ${userId}`)
 
   // Query helped by ClaudeAI
@@ -52,7 +52,8 @@ async function findAllPaymentsForUserByMonth(userId) {
   // Get name of each month and start date
   // Get all payment date and amount of matching user id
   // Sum payment amounts and group by each month
-  const query = `
+  try {
+    const query = `
   WITH month_series AS (
     SELECT 
         DATE_TRUNC('month', CURRENT_DATE) - INTERVAL '11 months' + 
@@ -64,7 +65,7 @@ async function findAllPaymentsForUserByMonth(userId) {
         rp.amount
     FROM rental_payments rp 
     JOIN rentals r ON rp.rental_id = r.id
-    WHERE r.owner_id = $1
+    WHERE r.owner_id = $1 AND rp.status = $2
   )
   SELECT 
     TO_CHAR(ms.month, 'Mon YYYY') AS month,
@@ -75,8 +76,12 @@ async function findAllPaymentsForUserByMonth(userId) {
   ORDER BY ms.month;
   `
 
-  const res = await db.query(query, [userId])
-  return res.rows
+    const res = await db.query(query, [userId, RENTAL_PAYMENTS_STATUS.APPROVED])
+    return res.rows
+  } catch (err) {
+    logger.error(`error while querying approved monthly payments for user ${userId}`, { stack: err.stack })
+    throw new AppError('Error fetching approved payments by month')
+  }
 }
 
 async function updatePaymentStatusToApproved(paymentId) {
@@ -117,7 +122,7 @@ module.exports = {
   createRentalPayment,
   findPaymentWithRentalDetailsById,
   findAllApprovedPaymentsByRentalId,
-  findAllPaymentsForUserByMonth,
+  findAllApprovedPaymentsForUserByMonth,
   updatePaymentStatusToApproved,
   updatePaymentStatusToRejected,
 }
