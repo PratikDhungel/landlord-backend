@@ -1833,3 +1833,8 @@
 2025-08-20T06:38:42.208Z [INFO]: approve rental payment service for payment 5 
 2025-08-20T06:38:42.225Z [INFO]: updating rental payment status to approved 
 2025-08-20T06:38:42.225Z [INFO]: query rental payments for rental id: 5 
+2025-08-20T06:45:58.815Z [INFO]: approve rental payment service for payment 5 
+2025-08-20T06:46:12.273Z [INFO]: approve rental payment service for payment 5 
+2025-08-20T06:47:05.716Z [INFO]: approve rental payment service for payment 5 
+2025-08-20T06:47:19.668Z [INFO]: approve rental payment service for payment 5 
+2025-08-20T06:49:11.330Z [INFO]: approve rental payment service for payment 5 

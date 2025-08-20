@@ -1,4 +1,5 @@
 const logger = require('../utils/logger')
+const { BadRequestError } = require('../utils/errors')
 const rentalPaymentsModels = require('../models/rentalPayments.models')
 const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
 
@@ -20,15 +21,17 @@ async function getAllRentalPaymentWithTotal(rentalId) {
   return { payments: rentalPayments, total: totalPaymentAmount }
 }
 
-async function approvePaymentForRental(paymentId) {
+async function approvePaymentForRental({ userId, paymentId }) {
   logger.info(`approve rental payment service for payment ${paymentId}`)
 
-  const rentalPaymentDetails = await rentalPaymentsModels.findPaymentById(paymentId)
-
-  // TODO Add check to see if rental owner is current user
+  const rentalPaymentDetails = await rentalPaymentsModels.findPaymentWithRentalDetailsById(paymentId)
 
   if (!rentalPaymentDetails) {
     throw new BadRequestError('Payment with id does not exist')
+  }
+
+  if (rentalPaymentDetails.ownerId !== userId) {
+    throw new BadRequestError('User is not the owner of the rental')
   }
 
   if (rentalPaymentDetails.status === RENTAL_PAYMENTS_STATUS.APPROVED) {

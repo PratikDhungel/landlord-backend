@@ -42,8 +42,12 @@ async function recordPaymentForRental(req, res, next) {
 async function approvePaymentForRental(req, res, next) {
   try {
     const paymentId = req.params.id
+    const userId = req.user.id
 
-    const approvedPaymentResponse = await rentalPaymentsServices.approvePaymentForRental(paymentId)
+    const approvedPaymentResponse = await rentalPaymentsServices.approvePaymentForRental({
+      userId,
+      paymentId,
+    })
 
     res.status(201).json(approvedPaymentResponse)
   } catch (err) {

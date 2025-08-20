@@ -14,12 +14,15 @@ async function createRentalPayment({ rentalId, payerId, amount, paymentDate }) {
   return res.rows[0]
 }
 
-async function findPaymentById(rentalId) {
+async function findPaymentWithRentalDetailsById(rentalId) {
   const res = await db.query(
-    `SELECT * from rental_payments
-     WHERE id = $1`,
+    `SELECT rep.id, rep.rental_id, rep.payer_id, rep.amount, rep.updated_at, rep.status, rt.owner_id
+     FROM RENTAL_PAYMENTS rep
+     LEFT JOIN rentals rt ON rt.id = rep.rental_id
+     WHERE rep.id = $1`,
     [rentalId],
   )
+
   return res.rows[0]
 }
 
@@ -90,7 +93,7 @@ async function updatePaymentStatusToApproved(paymentId) {
 
 module.exports = {
   createRentalPayment,
-  findPaymentById,
+  findPaymentWithRentalDetailsById,
   findAllPaymentsByRentalId,
   findAllPaymentsForUserByMonth,
   updatePaymentStatusToApproved,
