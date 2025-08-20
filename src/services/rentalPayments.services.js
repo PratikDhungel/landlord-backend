@@ -12,7 +12,7 @@ async function recordPaymentForRental(rentalPaymentPayload) {
 async function getAllRentalPaymentWithTotal(rentalId) {
   logger.info(`get all payments service for rentalId ${rentalId}`)
 
-  const rentalPayments = await rentalPaymentsModels.findAllApprovedPaymentsByRentalId(rentalId)
+  const rentalPayments = await rentalPaymentsModels.findAllPaymentsByRentalId(rentalId)
 
   logger.info(`calculating total payments for rental ${rentalId}`)
 

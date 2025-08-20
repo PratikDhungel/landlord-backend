@@ -1896,3 +1896,23 @@
 2025-08-20T07:43:40.335Z [INFO]: query user's financial summary for user: 1 
 2025-08-20T07:43:40.338Z [INFO]: get total payments by month 
 2025-08-20T07:43:40.338Z [INFO]: query payments by each month for user: 1 
+2025-08-20T07:47:50.500Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-20T07:47:50.501Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-20T07:47:50.501Z [INFO]: getting all payments for 3 for rental details 
+2025-08-20T07:47:50.502Z [INFO]: get all payments service for rentalId 3 
+2025-08-20T07:47:50.503Z [INFO]: query rental payments for rental id: 3 
+2025-08-20T07:47:50.516Z [INFO]: calculating total payments for rental 3 
+2025-08-20T07:47:50.516Z [INFO]: getting rental details service for 3 
+2025-08-20T07:49:22.602Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-20T07:49:22.604Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-20T07:49:22.608Z [INFO]: getting all payments for 3 for rental details 
+2025-08-20T07:49:22.609Z [INFO]: get all payments service for rentalId 3 
+2025-08-20T07:49:22.609Z [INFO]: query rental payments for rental id: 3 
+2025-08-20T07:49:22.622Z [ERROR]: error querying rental payments for rental id 3 {"stack":"error: bind message supplies 2 parameters, but prepared statement \"\" requires 1\n    at /app/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Object.findAllPaymentsByRentalId (/app/src/models/rentalPayments.models.js:38:17)\n    at async Object.getAllRentalPaymentWithTotal (/app/src/services/rentalPayments.services.js:15:26)\n    at async Object.getLiableRentalDetailsWithPayment (/app/src/services/rentals.services.js:36:35)\n    at async getLiableRentalDetailById (/app/src/controllers/rentals.controllers.js:77:37)"}
+2025-08-20T07:49:53.836Z [INFO]: get liable rental details for user and rental id: 1, 3 
+2025-08-20T07:49:53.838Z [INFO]: checking if rental id 3 matches for tenantId 1 
+2025-08-20T07:49:53.843Z [INFO]: getting all payments for 3 for rental details 
+2025-08-20T07:49:53.843Z [INFO]: get all payments service for rentalId 3 
+2025-08-20T07:49:53.843Z [INFO]: query rental payments for rental id: 3 
+2025-08-20T07:49:53.856Z [INFO]: calculating total payments for rental 3 
+2025-08-20T07:49:53.856Z [INFO]: getting rental details service for 3 
