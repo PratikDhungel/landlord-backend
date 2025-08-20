@@ -3,6 +3,7 @@ const logger = require('../utils/logger')
 
 const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
 const { AppError } = require('../utils/errors')
+const { stack } = require('../routes/auth.routes')
 
 async function createRentalPayment({ rentalId, payerId, amount, paymentDate }) {
   const res = await db.query(
@@ -26,16 +27,21 @@ async function findPaymentWithRentalDetailsById(rentalPaymentId) {
   return res.rows[0]
 }
 
-async function findAllPaymentsByRentalId(rentalId) {
+async function findAllApprovedPaymentsByRentalId(rentalId) {
   logger.info(`query rental payments for rental id: ${rentalId}`)
 
-  const query = `
-  SELECT * from rental_payments
-  WHERE rental_id = $1
-  `
+  try {
+    const query = `
+    SELECT * from rental_payments
+    WHERE rental_id = $1 and status = $2
+    `
 
-  const res = await db.query(query, [rentalId])
-  return res.rows
+    const res = await db.query(query, [rentalId, RENTAL_PAYMENTS_STATUS.APPROVED])
+    return res.rows
+  } catch (err) {
+    logger.error(`error querying approved rental payments for rental id ${rentalId}`, { stack: err.stack })
+    throw new AppError('Error finding approved payments for rental')
+  }
 }
 
 async function findAllPaymentsForUserByMonth(userId) {
@@ -110,7 +116,7 @@ async function updatePaymentStatusToRejected(paymentId) {
 module.exports = {
   createRentalPayment,
   findPaymentWithRentalDetailsById,
-  findAllPaymentsByRentalId,
+  findAllApprovedPaymentsByRentalId,
   findAllPaymentsForUserByMonth,
   updatePaymentStatusToApproved,
   updatePaymentStatusToRejected,
