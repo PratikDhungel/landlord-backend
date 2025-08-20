@@ -3,7 +3,6 @@ const logger = require('../utils/logger')
 
 const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
 const { AppError } = require('../utils/errors')
-const { stack } = require('../routes/auth.routes')
 
 async function createRentalPayment({ rentalId, payerId, amount, paymentDate }) {
   const res = await db.query(
