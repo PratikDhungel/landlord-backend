@@ -30,7 +30,7 @@ async function approvePaymentForRental({ userId, paymentId }) {
     throw new BadRequestError('Payment with id does not exist')
   }
 
-  if (rentalPaymentDetails.ownerId !== userId) {
+  if (rentalPaymentDetails.owner_id !== userId) {
     throw new BadRequestError('User is not the owner of the rental')
   }
 
@@ -38,11 +38,36 @@ async function approvePaymentForRental({ userId, paymentId }) {
     throw new BadRequestError('Payment has already been approved')
   }
 
-  logger.info(`updating rental payment status to approved`)
-
   await rentalPaymentsModels.updatePaymentStatusToApproved(paymentId)
 
   return { status: 'approved' }
 }
 
-module.exports = { recordPaymentForRental, getAllRentalPaymentWithTotal, approvePaymentForRental }
+async function rejectPaymentForRental({ userId, paymentId }) {
+  logger.info(`reject rental payment service for payment ${paymentId}`)
+
+  const rentalPaymentDetails = await rentalPaymentsModels.findPaymentWithRentalDetailsById(paymentId)
+
+  if (!rentalPaymentDetails) {
+    throw new BadRequestError('Payment with id does not exist')
+  }
+
+  if (rentalPaymentDetails.owner_id !== userId) {
+    throw new BadRequestError('User is not the owner of the rental')
+  }
+
+  if (rentalPaymentDetails.status === RENTAL_PAYMENTS_STATUS.REJECTED) {
+    throw new BadRequestError('Payment has already been rejected')
+  }
+
+  await rentalPaymentsModels.updatePaymentStatusToRejected(paymentId)
+
+  return { status: 'rejected' }
+}
+
+module.exports = {
+  recordPaymentForRental,
+  getAllRentalPaymentWithTotal,
+  approvePaymentForRental,
+  rejectPaymentForRental,
+}

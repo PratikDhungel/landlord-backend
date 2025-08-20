@@ -1838,3 +1838,8 @@
 2025-08-20T06:47:05.716Z [INFO]: approve rental payment service for payment 5 
 2025-08-20T06:47:19.668Z [INFO]: approve rental payment service for payment 5 
 2025-08-20T06:49:11.330Z [INFO]: approve rental payment service for payment 5 
+2025-08-20T06:56:27.137Z [INFO]: reject rental payment service for payment 13 
+2025-08-20T06:56:40.901Z [INFO]: reject rental payment service for payment 13 
+2025-08-20T06:57:52.932Z [INFO]: reject rental payment service for payment 13 
+2025-08-20T06:58:08.282Z [INFO]: reject rental payment service for payment 13 
+2025-08-20T06:58:08.303Z [INFO]: update query to change rental payment 13 status to rejected 

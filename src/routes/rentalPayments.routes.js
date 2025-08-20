@@ -5,5 +5,6 @@ const rentalPaymentsControllers = require('../controllers/rentalPayments.control
 const router = express.Router()
 
 router.put('/:id/approve', authenticateJWT, rentalPaymentsControllers.approvePaymentForRental)
+router.put('/:id/reject', authenticateJWT, rentalPaymentsControllers.rejectPaymentForRental)
 
 module.exports = router

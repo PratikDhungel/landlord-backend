@@ -14,13 +14,13 @@ async function createRentalPayment({ rentalId, payerId, amount, paymentDate }) {
   return res.rows[0]
 }
 
-async function findPaymentWithRentalDetailsById(rentalId) {
+async function findPaymentWithRentalDetailsById(rentalPaymentId) {
   const res = await db.query(
     `SELECT rep.id, rep.rental_id, rep.payer_id, rep.amount, rep.updated_at, rep.status, rt.owner_id
      FROM RENTAL_PAYMENTS rep
      LEFT JOIN rentals rt ON rt.id = rep.rental_id
      WHERE rep.id = $1`,
-    [rentalId],
+    [rentalPaymentId],
   )
 
   return res.rows[0]
@@ -74,7 +74,7 @@ async function findAllPaymentsForUserByMonth(userId) {
 }
 
 async function updatePaymentStatusToApproved(paymentId) {
-  logger.info(`query rental payments for rental id: ${paymentId}`)
+  logger.info(`update query to change rental payment ${paymentId} status to approved`)
 
   try {
     const res = await db.query(
@@ -86,8 +86,24 @@ async function updatePaymentStatusToApproved(paymentId) {
     return res.rows[0]
   } catch (err) {
     logger.error(`error while updating payment ${paymentId} to approved status`, { stack: err.stack })
-
     throw new AppError('Error while updating payment status to approved')
+  }
+}
+
+async function updatePaymentStatusToRejected(paymentId) {
+  logger.info(`update query to change rental payment ${paymentId} status to rejected`)
+
+  try {
+    const res = await db.query(
+      `UPDATE rental_payments SET status = $2, updated_at = NOW()
+      WHERE id = $1`,
+      [paymentId, RENTAL_PAYMENTS_STATUS.REJECTED],
+    )
+
+    return res.rows[0]
+  } catch (err) {
+    logger.error(`error while updating payment ${paymentId} to rejected status`, { stack: err.stack })
+    throw new AppError('Error while updating payment status to rejected')
   }
 }
 
@@ -97,4 +113,5 @@ module.exports = {
   findAllPaymentsByRentalId,
   findAllPaymentsForUserByMonth,
   updatePaymentStatusToApproved,
+  updatePaymentStatusToRejected,
 }

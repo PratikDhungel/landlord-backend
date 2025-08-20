@@ -55,4 +55,20 @@ async function approvePaymentForRental(req, res, next) {
   }
 }
 
-module.exports = { recordPaymentForRental, approvePaymentForRental }
+async function rejectPaymentForRental(req, res, next) {
+  try {
+    const paymentId = req.params.id
+    const userId = req.user.id
+
+    const rejectedPaymentResponse = await rentalPaymentsServices.rejectPaymentForRental({
+      userId,
+      paymentId,
+    })
+
+    res.status(201).json(rejectedPaymentResponse)
+  } catch (err) {
+    next(err)
+  }
+}
+
+module.exports = { recordPaymentForRental, approvePaymentForRental, rejectPaymentForRental }
