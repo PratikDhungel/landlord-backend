@@ -33,6 +33,7 @@ async function findAllPaymentsByRentalId(rentalId) {
     const query = `
     SELECT * from rental_payments
     WHERE rental_id = $1
+    ORDER BY payment_date DESC
     `
 
     const res = await db.query(query, [rentalId])
