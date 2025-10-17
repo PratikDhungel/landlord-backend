@@ -4,12 +4,12 @@ const logger = require('../utils/logger')
 const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
 const { AppError } = require('../utils/errors')
 
-async function createRentalPayment({ rentalId, payerId, amount, paymentDate }) {
+async function createRentalPayment({ rentalId, payerId, amount, paymentDate, proofOfPayment }) {
   const res = await db.query(
-    `INSERT INTO rental_payments (rental_id, payer_id, amount, payment_date)
-     VALUES ($1, $2, $3, $4)
+    `INSERT INTO rental_payments (rental_id, payer_id, amount, payment_date, proof_of_payment)
+     VALUES ($1, $2, $3, $4, $5)
      RETURNING *`,
-    [rentalId, payerId, amount, paymentDate],
+    [rentalId, payerId, amount, paymentDate, proofOfPayment],
   )
   return res.rows[0]
 }

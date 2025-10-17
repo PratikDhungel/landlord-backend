@@ -22,7 +22,7 @@ async function uploadfileToBucket(file) {
     throw new AppError('Error uploading file to supabase')
   }
 
-  logger.error(`Successfully uploaded file to bucket`)
+  logger.info(`Successfully uploaded file to bucket`)
 
   const filePath = data.path
   const { signedFileUrl } = await getSignedFileUrlFromPath(filePath)
@@ -32,6 +32,7 @@ async function uploadfileToBucket(file) {
     signedFileUrl,
   }
 }
+
 async function getSignedFileUrlFromPath(filePath) {
   const { data, error: signedDataError } = await supabaseClient.storage
     .from(supabaseBucket)

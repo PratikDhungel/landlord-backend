@@ -1,23 +1,40 @@
 const rentalPaymentsServices = require('../services/rentalPayments.services')
+const { uploadfileToBucket } = require('../services/supabase.services')
 
+const logger = require('../utils/logger')
 const { isValidDate } = require('../utils/dateUtils')
 const { BadRequestError } = require('../utils/errors')
 
 async function recordPaymentForRental(req, res, next) {
   try {
-    const { rental_id, amount, payment_date } = req.body
+    const { data, file } = req.body
+    const { rental_id, amount, payment_date } = JSON.parse(data)
+
+    if (!file) {
+      logger.error(`Proof of payment required in new rental payment for rental: ${rental_id}`)
+
+      throw new BadRequestError('Proof of Payment is required')
+    }
 
     if (!rental_id) {
+      logger.error(`Rental id required in new rental payment for rental: ${rental_id}`)
+
       return next(new BadRequestError('Rental id is required'))
     }
 
     if (!amount) {
+      logger.error(`Payment amount required in new rental payment for rental: ${rental_id}`)
+
       return next(new BadRequestError('Payment amount is required'))
     }
 
     if (payment_date && !isValidDate(payment_date)) {
+      logger.error(`Invalid payment date in new rental payment for rental: ${rental_id}`)
+
       return next(new BadRequestError('Invalid payment date'))
     }
+
+    const { filePath } = await uploadfileToBucket(file)
 
     // If payment date not available, set current time as payment date
     const paymentDate = payment_date || new Date()
@@ -29,6 +46,7 @@ async function recordPaymentForRental(req, res, next) {
       payerId: user.id,
       amount: amount,
       paymentDate,
+      proofOfPayment: filePath,
     }
 
     const rentals = await rentalPaymentsServices.recordPaymentForRental(rentalPaymentPayload)
