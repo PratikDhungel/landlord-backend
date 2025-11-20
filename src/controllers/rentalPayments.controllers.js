@@ -91,4 +91,41 @@ async function rejectPaymentForRental(req, res, next) {
   }
 }
 
-module.exports = { recordPaymentForRental, approvePaymentForRental, rejectPaymentForRental }
+async function getProofOfPaymentDetailsFromId(req, res, next) {
+  try {
+    const fileId = req.params.id
+
+    if (!fileId) {
+      logger.error(`Proof of payment id is required`)
+
+      throw new BadRequestError('Proof of Payment id is required')
+    }
+
+    let proofOfPaymentUrl = ''
+    let proofOfPAymentFileType = ''
+
+    try {
+      const { signedFileUrl, fileType } = await getSignedFileUrlFromPath(fileId)
+      proofOfPaymentUrl = signedFileUrl
+      proofOfPAymentFileType = fileType
+    } catch (e) {
+      logger.error('Error fetching signed proof of payment url')
+    }
+
+    const proofOfPaymentDetails = {
+      url: proofOfPaymentUrl,
+      fileType: proofOfPAymentFileType,
+    }
+
+    res.status(201).json(proofOfPaymentDetails)
+  } catch (err) {
+    next(err)
+  }
+}
+
+module.exports = {
+  recordPaymentForRental,
+  approvePaymentForRental,
+  rejectPaymentForRental,
+  getProofOfPaymentDetailsFromId,
+}

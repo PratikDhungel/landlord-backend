@@ -43,7 +43,15 @@ async function getSignedFileUrlFromPath(filePath) {
     throw new AppError('Error fetching file from supabase')
   }
 
-  return { filePath, signedFileUrl: data.signedUrl, fileType: data.type }
+  try {
+    // Use HEAD method to get content-type
+    const response = await fetch(`${data.signedUrl}`, { method: 'HEAD' })
+    const contentType = response.headers.get('content-type')
+
+    return { filePath, signedFileUrl: data.signedUrl, fileType: contentType }
+  } catch {
+    return { filePath, signedFileUrl: data.signedUrl, fileType: null }
+  }
 }
 
 module.exports = { uploadfileToBucket, getSignedFileUrlFromPath }
