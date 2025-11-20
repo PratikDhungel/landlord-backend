@@ -3,6 +3,7 @@ const { authenticateJWT } = require('../middlewares/authenticate')
 const rentalsControllers = require('../controllers/rentals.controllers.js')
 const rentalPlansControllers = require('../controllers/rentalPlans.controllers.js')
 const rentalPaymentsControllers = require('../controllers/rentalPayments.controllers.js')
+const { uploadFile } = require('../utils/fileUploader')
 
 const router = express.Router()
 
@@ -14,6 +15,11 @@ router.get('/owned-rentals', authenticateJWT, rentalsControllers.getRentalsForOw
 router.get('/liable-rentals', authenticateJWT, rentalsControllers.getRentalsForTenants)
 router.get('/details/:id', authenticateJWT, rentalsControllers.getLiableRentalDetailById)
 
-router.post('/create-rental-payment', authenticateJWT, rentalPaymentsControllers.recordPaymentForRental)
+router.post(
+  '/create-rental-payment',
+  authenticateJWT,
+  uploadFile.single('file'),
+  rentalPaymentsControllers.recordPaymentForRental,
+)
 
 module.exports = router

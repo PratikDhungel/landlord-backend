@@ -43,7 +43,7 @@ async function getSignedFileUrlFromPath(filePath) {
     throw new AppError('Error fetching file from supabase')
   }
 
-  return { filePath, signedFileUrl: data.signedUrl }
+  return { filePath, signedFileUrl: data.signedUrl, fileType: data.type }
 }
 
 module.exports = { uploadfileToBucket, getSignedFileUrlFromPath }

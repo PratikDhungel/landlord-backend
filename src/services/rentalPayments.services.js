@@ -4,9 +4,9 @@ const rentalPaymentsModels = require('../models/rentalPayments.models')
 const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
 
 async function recordPaymentForRental(rentalPaymentPayload) {
-  const rentals = await rentalPaymentsModels.createRentalPayment(rentalPaymentPayload)
+  const rentalPayment = await rentalPaymentsModels.createRentalPayment(rentalPaymentPayload)
 
-  return rentals
+  return rentalPayment
 }
 
 async function getAllRentalPaymentWithTotal(rentalId) {

@@ -1,5 +1,5 @@
 const rentalPaymentsServices = require('../services/rentalPayments.services')
-const { uploadfileToBucket } = require('../services/supabase.services')
+const { uploadfileToBucket, getSignedFileUrlFromPath } = require('../services/supabase.services')
 
 const logger = require('../utils/logger')
 const { isValidDate } = require('../utils/dateUtils')
@@ -7,8 +7,10 @@ const { BadRequestError } = require('../utils/errors')
 
 async function recordPaymentForRental(req, res, next) {
   try {
-    const { data, file } = req.body
-    const { rental_id, amount, payment_date } = JSON.parse(data)
+    const file = req.file
+    const data = JSON.parse(req.body.data)
+
+    const { rental_id, amount, payment_date } = data
 
     if (!file) {
       logger.error(`Proof of payment required in new rental payment for rental: ${rental_id}`)
@@ -49,9 +51,9 @@ async function recordPaymentForRental(req, res, next) {
       proofOfPayment: filePath,
     }
 
-    const rentals = await rentalPaymentsServices.recordPaymentForRental(rentalPaymentPayload)
+    const rentalPayment = await rentalPaymentsServices.recordPaymentForRental(rentalPaymentPayload)
 
-    res.status(201).json(rentals)
+    res.status(201).json(rentalPayment)
   } catch (err) {
     next(err)
   }
