@@ -73,7 +73,7 @@ async function findAllApprovedPaymentsForUserByMonth(userId) {
   FROM month_series ms
   LEFT JOIN owner_received_payments orp ON DATE_TRUNC('month', orp.payment_date) = ms.month
   GROUP BY ms.month
-  ORDER BY ms.month;
+  ORDER BY ms.month DESC;
   `
 
     const res = await db.query(query, [userId, RENTAL_PAYMENTS_STATUS.APPROVED])
