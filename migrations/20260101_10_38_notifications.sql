@@ -3,6 +3,7 @@ CREATE TABLE notifications (
   user_id BIGINT NOT NULL REFERENCES users(id),
   title TEXT NOT NULL,
   body TEXT NOT NULL,
+  data JSONB DEFAULT '{}',
   type TEXT NOT NULL,
   read BOOLEAN DEFAULT FALSE,
   created_at TIMESTAMP DEFAULT NOW(),
@@ -15,4 +16,5 @@ CREATE TABLE push_tokens (
   token TEXT NOT NULL UNIQUE,
   created_at TIMESTAMP DEFAULT NOW(),
   deleted_at TIMESTAMP
+  UNIQUE (user_id, token)
 );
