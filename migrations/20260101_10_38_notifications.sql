@@ -15,7 +15,7 @@ CREATE TABLE push_tokens (
   user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   token TEXT NOT NULL UNIQUE,
   created_at TIMESTAMP DEFAULT NOW(),
-  deleted_at TIMESTAMP
+  deleted_at TIMESTAMP,
   UNIQUE (user_id, token)
 );
 
