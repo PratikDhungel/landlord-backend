@@ -24,4 +24,29 @@ async function createNotification({ userId, title, body, data = {}, type }) {
   return rows[0]
 }
 
-module.exports = { addNotificationToken, createNotification }
+async function findActivePushTokensByUserId(userId) {
+  const query = `SELECT token FROM push_tokens
+       WHERE user_id = $1 AND deleted_at IS NULL`
+
+  const { rows } = await db.query(query, [userId])
+
+  return rows.map((row) => row.token)
+}
+
+async function deactivatePushTokens(tokens) {
+  // NOTE a token rejected by Expo is dead for every account that shares the
+  // device, so all rows holding it are retired, not just the current user's
+  const query = `UPDATE push_tokens SET deleted_at = NOW()
+       WHERE token = ANY($1) AND deleted_at IS NULL`
+
+  const { rowCount } = await db.query(query, [tokens])
+
+  return rowCount
+}
+
+module.exports = {
+  addNotificationToken,
+  createNotification,
+  findActivePushTokensByUserId,
+  deactivatePushTokens,
+}
