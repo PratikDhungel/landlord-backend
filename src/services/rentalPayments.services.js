@@ -1,7 +1,9 @@
 const logger = require('../utils/logger')
 const { BadRequestError } = require('../utils/errors')
 const rentalPaymentsModels = require('../models/rentalPayments.models')
+const notificationsServices = require('./notifications.services')
 const { RENTAL_PAYMENTS_STATUS } = require('../constants/rentalPayments.constants')
+const { NOTIFICATION_TYPES } = require('../constants/notifications.constants')
 
 async function recordPaymentForRental(rentalPaymentPayload) {
   const rentalPayment = await rentalPaymentsModels.createRentalPayment(rentalPaymentPayload)
@@ -43,7 +45,7 @@ async function approvePaymentForRental({ userId, paymentId }) {
   return { status: 'approved' }
 }
 
-async function rejectPaymentForRental({ userId, paymentId }) {
+async function rejectPaymentForRental({ userId, paymentId, rejectionReason }) {
   logger.info(`reject rental payment service for payment ${paymentId}`)
 
   const rentalPaymentDetails = await rentalPaymentsModels.findPaymentWithRentalDetailsById(paymentId)
@@ -60,7 +62,15 @@ async function rejectPaymentForRental({ userId, paymentId }) {
     throw new BadRequestError('Payment has already been rejected')
   }
 
-  await rentalPaymentsModels.updatePaymentStatusToRejected(paymentId)
+  await rentalPaymentsModels.updatePaymentStatusToRejected(paymentId, rejectionReason)
+
+  await notificationsServices.notifyUser({
+    userId: rentalPaymentDetails.payer_id,
+    title: 'Payment rejected',
+    body: rejectionReason,
+    data: { paymentId: rentalPaymentDetails.id, rentalId: rentalPaymentDetails.rental_id },
+    type: NOTIFICATION_TYPES.PAYMENT_REJECTED,
+  })
 
   return { status: 'rejected' }
 }

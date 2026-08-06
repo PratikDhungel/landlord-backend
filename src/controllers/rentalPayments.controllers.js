@@ -80,9 +80,18 @@ async function rejectPaymentForRental(req, res, next) {
     const paymentId = req.params.id
     const userId = req.user.id
 
+    const rejectionReason = req.body.rejection_reason?.trim()
+
+    if (!rejectionReason) {
+      logger.error(`Rejection reason required to reject payment: ${paymentId}`)
+
+      return next(new BadRequestError('Rejection reason is required'))
+    }
+
     const rejectedPaymentResponse = await rentalPaymentsServices.rejectPaymentForRental({
       userId,
       paymentId,
+      rejectionReason,
     })
 
     res.status(201).json(rejectedPaymentResponse)

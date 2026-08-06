@@ -101,14 +101,15 @@ async function updatePaymentStatusToApproved(paymentId) {
   }
 }
 
-async function updatePaymentStatusToRejected(paymentId) {
+async function updatePaymentStatusToRejected(paymentId, rejectionReason) {
   logger.info(`update query to change rental payment ${paymentId} status to rejected`)
 
   try {
     const res = await db.query(
-      `UPDATE rental_payments SET status = $2, updated_at = NOW()
-      WHERE id = $1`,
-      [paymentId, RENTAL_PAYMENTS_STATUS.REJECTED],
+      `UPDATE rental_payments SET status = $2, rejection_reason = $3, updated_at = NOW()
+      WHERE id = $1
+      RETURNING *`,
+      [paymentId, RENTAL_PAYMENTS_STATUS.REJECTED, rejectionReason],
     )
 
     return res.rows[0]

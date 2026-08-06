@@ -13,7 +13,7 @@ CREATE TABLE notifications (
 CREATE TABLE push_tokens (
   id BIGSERIAL PRIMARY KEY,
   user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  token TEXT NOT NULL UNIQUE,
+  token TEXT NOT NULL,
   created_at TIMESTAMP DEFAULT NOW(),
   deleted_at TIMESTAMP,
   UNIQUE (user_id, token)
